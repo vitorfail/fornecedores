@@ -9,16 +9,22 @@
     <style>
         /* Reset e estilos base */
         * {
+            font-family: "Inter", sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color:#4B5563;
         }
-        
+        :root{
+            --smooth: #F8F7F4;
+            --primario:#eb7500;
+            --secundario:#b85c00;
+        }
         body {
             font-family: 'Inter', sans-serif;
             color: #000000;
             line-height: 1.6;
-            background-color: #F8F7F4;
+            background-color: white;
         }
         
         .container {
@@ -142,38 +148,62 @@
         
         .testimonial-card {
             background-color: #FFFFFF;
-            padding: 30px;
+            padding:60px 30px;
             border-radius: 15px;
             text-align: center;
             margin: 0 20px;
         }
-        
+        .testimonial-card .info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonial-card .info p{
+            text-align: start;
+        }
         .testimonial-avatar {
             width: 28%;
             margin: 0 auto;
         }
         
         .testimonial-text {
+            padding-bottom: 30px;
             font-family: 'Outfit', sans-serif;
             font-size: 17px;
-            font-style: italic;
-            color: #000000;
             margin: -35px 0 -5px 0;
         }
         
         .testimonial-rating {
+            border-radius: 50%;
             width: 15%;
-            margin: 0 auto;
+            margin-right: 10px;
         }
         
         .testimonial-author {
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             color: #242424;
-            margin-top: -10px;
         }
-        
+        .testimonial-author span{
+            font-size: 15px;
+            font-weight: 600;
+            color: #00000093;
+        }
+        .testimonial-section .titulos{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .testimonial-section .titulos h1{
+            font-size:40px;
+            color: var(--primario);
+        }
         .problem-section, .solution-section, .proof-section, .benefits-section {
             background-color: #F8F7F4;
         }
@@ -591,6 +621,7 @@
             gap: 10px;
         }
         .section-carousel{
+            background-color: var(--smooth);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -616,12 +647,12 @@
         }
         .section-carousel .buttons button:nth-child(1){
             color: white;
-            background: linear-gradient(#335eec, #0e44f5);
+            background: linear-gradient(var(--primario), var(--secundario));
         }
         .section-carousel .buttons button:nth-child(2){
             background: transparent;
-            border: 2px solid #0e44f5;
-            color: #0e44f5;
+            border: 2px solid var(--primario);
+            color: var(--primario);
         }
         .indicator {
             width: 12px;
@@ -633,8 +664,38 @@
         }
 
         .indicator.active {
-            background: rgb(255, 136, 0);
+            background: var(--primario);
             transform: scale(1.2);
+        }
+        .whatsapp-fixed
+        {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
         /* Responsividade */
         @media (max-width: 1024px) {
@@ -777,29 +838,36 @@
     <!-- Seção de depoimentos -->
     <section class="testimonial-section section">
         <div class="container">
+            <div class="titulos">
+                <h1>Aprovado por +1.000 clientes.</h1>
+                <p>Nossa lista de fornecedores é grande e de qualidade, quem tem acesso concorda com isso.</p>
+            </div>
             <div class="testimonial-grid">
                 <!-- Depoimento 1 -->
                 <div class="testimonial-card">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar">
-                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat feugiat pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-ad7a49ba7c810da7d7c440f5e9d99e91.png" alt="Avaliação" class="testimonial-rating">
-                    <h3 class="testimonial-author">Camila Borges<br><span style="font-weight: normal;">Perfil de Persona 01</span></h3>
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>"Perdi a vergonha de mandar DM e e-mail sem saber pra quem. Agora minha abordagem é direta e profissional porque sei exatamente com quem falar. Isso faz toda a diferença!"<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+                        <img src="testimonial-1.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>Gestor de Tráfego</span></h3>
+                    </div>
                 </div>
-                
                 <!-- Depoimento 2 -->
                 <div class="testimonial-card">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar">
-                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat feugiat pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-ad7a49ba7c810da7d7c440f5e9d99e91.png" alt="Avaliação" class="testimonial-rating">
-                    <h3 class="testimonial-author">Camila Borges<br><span style="font-weight: normal;">Perfil de Persona 02</span></h3>
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Economizei um tempo absurdo. Eu passava horas fuçando o perfil das marcas e das blogueiras para tentar achar um contato. Com a lista, todo esse trabalho já está feito. Agora posso focar em criar conteúdo e nas negociações."<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+
+                        <img src="testimonial-2.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>MicroEmpreendedor</span></h3>
+                    </div>        
                 </div>
                 
                 <!-- Depoimento 3 -->
                 <div class="testimonial-card">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar">
-                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat feugiat pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-ad7a49ba7c810da7d7c440f5e9d99e91.png" alt="Avaliação" class="testimonial-rating">
-                    <h3 class="testimonial-author">Camila Borges<br><span style="font-weight: normal;">Perfil de Persona 03</span></h3>
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Organização 10/10. A lista veio categorizada por nicho (moda, beleza, casa, etc) e pelo valor médio de parceria. Ficou super fácil priorizar para quais marcas eu deveria ir primeiro."<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+                        <img src="testimonial-3.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>Social Media</span></h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -809,13 +877,13 @@
     <section class="problem-section section">
         <div class="container">
             <div class="content-box problem-box">
-                <h2 class="section-heading">[headline de problema]</h2>
+                <h2 class="section-heading">Você se reconhece em algum desses pontos?</h2>
                 <div class="divider"></div>
                 <ul class="icon-list">
-                    <li><i class="fas fa-arrow-right"></i> Cite um problema que o seu cliente vive</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um problema que o seu cliente vive</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um problema que o seu cliente vive</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um problema que o seu cliente vive</li>
+                    <li><i class="fas fa-arrow-right"></i>Já perdeu horas procurando fornecedores no Google ou Instagram e caiu em golpes.</li>
+                    <li><i class="fas fa-arrow-right"></i>Comprou produtos que encalharam e ficou com dinheiro preso.</li>
+                    <li><i class="fas fa-arrow-right"></i>Não sabe precificar sem cortar a própria margem.</li>
+                    <li><i class="fas fa-arrow-right"></i>Tem medo de investir errado e se frustrar.</li>
                 </ul>
             </div>
         </div>
@@ -825,12 +893,13 @@
     <section class="solution-section section">
         <div class="container">
             <div class="content-box">
-                <h2 class="section-heading">[headline de solução]</h2>
+                <h2 class="section-heading">Conheça nossa Solução</h2>
                 <div class="divider"></div>
-                <p>O <b>[NOME DO PRODUTO]</b> é uma forma prática para <b>[INSERIR RESULTADO DESEJADO]</b>, que permite que você <b>[DESCREVER PRINCIPAIS BENEFÍCIOS]</b> sem <b>[DESCREVER O QUE QUEREM EVITAR].</b></p>
-                <p>Isso é possível ao <b>[EXPLICAR MÉTODO]</b> sem <b>[EXPLICAR O QUE FAZ COM QUE ELES EVITEM O QUE ELES DESEJAM].</b></p>
-                <p>E como resultado, isso libera você para <b>[INSERIR O RESULTADO QUE ELES DESEJAM].</b></p>
-                <p>Esse é o <b>[NOME DO PRODUTO].</b></p>
+                <p>✨ Imagine ter em mãos uma lista organizada, validada e completa com os melhores fornecedores do Brasil — com produtos já testados, margem de lucro alta e scripts prontos para você negociar e vender.
+Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem clareza sobre:</p>
+                <p>Onde comprar com segurança.</p>
+                <p>Como negociar mesmo começando pequena.</p>
+                <p>Como validar suas vendas em até 48 horas.</p>
             </div>
         </div>
     </section>
@@ -930,7 +999,7 @@
     <!-- Seção de conteúdo -->
     <section class="section">
         <div class="container text-center">
-            <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/Group-424.png" alt="Logo" class="hero-logo">
+            <img src="logo.png" alt="Logo" class="hero-logo">
             <h2 class="section-heading">o que você vai aprender</h2>
             <p>Apenas uma <b>pequena prévia</b> do que você <b>terá acesso</b> com o <b>[Nome do Produto]:</b></p>
             <div class="divider"></div>
@@ -1018,7 +1087,7 @@
     <!-- Seção de oferta -->
     <section id="offer" class="offer-section">
         <div class="container text-center">
-            <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/Group-424.png" alt="Logo" class="hero-logo">
+            <img src="logo.png" alt="Logo" class="hero-logo">
             <h2 class="section-heading">Chega de [problemas que eles passam]</h2>
             <p>Tenha <strong>acesso ao [PRODUTO] para [RESULTADO DESEJADO]</strong></p>
             <div class="divider"></div>
@@ -1026,7 +1095,7 @@
             <div class="offer-grid">
                 <!-- Oferta Premium -->
                 <div class="offer-card offer-premium">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/logo-branca.png" alt="Logo" class="offer-logo">
+                    <img src="logo.png" alt="Logo" class="offer-logo">
                     <h3 class="offer-title">[NOME DO PRODUTO + OFERTA]</h3>
                     <p class="offer-original-price">De R$ 197,00 por</p>
                     <h4 class="offer-current-price">APENAS R$ 97</h4>
@@ -1051,7 +1120,7 @@
                 
                 <!-- Oferta Básica -->
                 <div class="offer-card">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/logo-branca.png" alt="Logo" class="offer-logo">
+                    <img src="logo.png" alt="Logo" class="offer-logo">
                     <h3 class="offer-title">[NOME DO PRODUTO + OFERTA]</h3>
                     <p class="offer-original-price">De R$ 97,00 por</p>
                     <h4 class="offer-current-price">APENAS R$ 47</h4>
@@ -1140,7 +1209,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/logo-branca.png" alt="Logo" class="footer-logo">
+                    <img src="logo.png" alt="Logo" class="footer-logo">
                     <p class="footer-text">Este produto é oferecido a você e protegido por direitos autorais por [nome da sua empresa].</p>
                 </div>
                 <div>
@@ -1149,7 +1218,9 @@
             </div>
         </div>
     </footer>
-
+    <a href="https://api.whatsapp.com/send/?phone=5547991715818&amp;text=Ol%C3%A1%2C+vim+pelo+site+da+MSSulInoxcorrimaos%2C+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" class="whatsapp-fixed">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
     <script>
         // Script para as FAQs
         document.querySelectorAll('.faq-question').forEach(question => {

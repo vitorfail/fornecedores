@@ -252,12 +252,23 @@
         }
         
         .icon-list i {
+            animation: lateral 0.8s ease-in-out infinite;
             color: #EE5253;
             font-size: 33px;
             margin-right: 10px;
             min-width: 33px;
         }
-        
+        @keyframes lateral {
+            0%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(-20px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
         .proof-list i {
             color: #73AA00;
         }
@@ -686,6 +697,59 @@
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
         }
+        .svg{
+            width: fit-content;
+        }
+        .svg svg{
+            width: 80px;
+            height: 80px;
+        }
+        .svg svg path{
+            animation: sirene 0.5s ease-in-out infinite;
+        }
+        @keyframes sirene {
+            0%{
+                box-shadow: 50px 50px 10px red;
+            }
+            50%{
+                box-shadow: 50px 50px 140px red;
+            }
+            0%{
+                box-shadow: 50px 50px 10px red;
+            }
+        }
+        .redline{
+            display: flex;
+            align-items: start;
+            justify-content: center;
+        }
+        #path4142 {
+        animation: blink2 0.5s infinite;
+        }
+
+        #path4231 {
+        animation: blink-top2 0.5s infinite;
+        }
+
+        #path4227 {
+        animation: blink-top2 0.5s infinite;
+        }
+
+        ellipse#path4229 {
+        animation: blink-top2 0.5s infinite;
+        }
+
+        @keyframes blink2 {
+        to {
+            fill: blue;
+        }
+        }
+
+        @keyframes blink-top2 {
+        to {
+            fill: #1c56ff;
+        }
+        }
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
@@ -877,7 +941,245 @@
     <section class="problem-section section">
         <div class="container">
             <div class="content-box problem-box">
-                <h2 class="section-heading">Você se reconhece em algum desses pontos?</h2>
+                <div class="redline">
+                    <div class="svg">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                        <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+                        <svg
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        width="200"
+                        height="200"
+                        viewBox="0 0 200 200"
+                        id="svg2"
+                        version="1.1"
+                        inkscape:version="0.91 r13725"
+                        sodipodi:docname="siren2.svg">
+                        <defs
+                            id="defs4" />
+                        <sodipodi:namedview
+                            id="base"
+                            pagecolor="#ffffff"
+                            bordercolor="#666666"
+                            borderopacity="1.0"
+                            inkscape:pageopacity="0.0"
+                            inkscape:pageshadow="2"
+                            inkscape:zoom="3.959798"
+                            inkscape:cx="114.26728"
+                            inkscape:cy="95.909684"
+                            inkscape:document-units="px"
+                            inkscape:current-layer="layer1"
+                            showgrid="false"
+                            units="px"
+                            inkscape:window-width="1247"
+                            inkscape:window-height="755"
+                            inkscape:window-x="0"
+                            inkscape:window-y="1"
+                            inkscape:window-maximized="1" />
+                        <metadata
+                            id="metadata7">
+                            <rdf:RDF>
+                            <cc:Work
+                                rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type
+                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title />
+                            </cc:Work>
+                            </rdf:RDF>
+                        </metadata>
+                        <g
+                            inkscape:label="Layer 1"
+                            inkscape:groupmode="layer"
+                            id="layer1"
+                            transform="translate(0,-852.36216)">
+                            <path
+                            style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 46.972093,991.50047 89.398497,0 0.50507,-30.80965 c 0.25254,-50.25509 -45.961932,-45.96194 -45.961932,-45.96194 -43.436559,0 -43.941635,38.13326 -43.941635,38.13326 z"
+                            id="path4142"
+                            inkscape:connector-curvature="0"
+                            sodipodi:nodetypes="cccccc" />
+                            <rect
+                            style="opacity:1;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="rect4142"
+                            width="90.913734"
+                            height="16.667542"
+                            x="46.214481"
+                            y="991.2478"
+                            rx="1.64704"
+                            ry="1.56199" />
+                            <rect
+                            style="opacity:1;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="rect4209"
+                            width="15.178572"
+                            height="16.428572"
+                            x="117.14286"
+                            y="991.29071"
+                            rx="1.6609303"
+                            ry="1.7735404" />
+                            <ellipse
+                            style="opacity:1;fill:#c65b84;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4229"
+                            cx="56.723225"
+                            cy="965.05566"
+                            rx="15.96176"
+                            ry="21.892153"
+                            transform="matrix(0.99717375,0.07513001,0.0187346,0.99982449,0,0)" />
+                            <ellipse
+                            style="opacity:1;fill:#ffaaaa;fill-opacity:0.1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4231"
+                            cx="-499.25079"
+                            cy="799.27252"
+                            rx="5.5357141"
+                            ry="14.642858"
+                            transform="matrix(0.77268444,-0.63479033,0.63479033,0.77268444,0,0)"
+                            inkscape:transform-center-x="6.0714286"
+                            inkscape:transform-center-y="1.4285714" />
+                            <ellipse
+                            style="opacity:1;fill:#b66b88;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4225"
+                            cx="89.821434"
+                            cy="967.005"
+                            rx="11.964286"
+                            ry="13.928573" />
+                            <ellipse
+                            style="opacity:1;fill:#c9809b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4227"
+                            cx="90.083199"
+                            cy="967.12573"
+                            rx="18.39031"
+                            ry="24.288219"
+                            transform="matrix(0.99999849,-0.00173693,0.01523936,0.99988387,0,0)" />
+                        </g>
+                        </svg>
+
+                    </div>
+                    <h2 class="section-heading">Sabemos dos seus problemas</h2>
+                    <div class="svg">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                        <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+                        <svg
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        width="200"
+                        height="200"
+                        viewBox="0 0 200 200"
+                        id="svg2"
+                        version="1.1"
+                        inkscape:version="0.91 r13725"
+                        sodipodi:docname="siren2.svg">
+                        <defs
+                            id="defs4" />
+                        <sodipodi:namedview
+                            id="base"
+                            pagecolor="#ffffff"
+                            bordercolor="#666666"
+                            borderopacity="1.0"
+                            inkscape:pageopacity="0.0"
+                            inkscape:pageshadow="2"
+                            inkscape:zoom="3.959798"
+                            inkscape:cx="114.26728"
+                            inkscape:cy="95.909684"
+                            inkscape:document-units="px"
+                            inkscape:current-layer="layer1"
+                            showgrid="false"
+                            units="px"
+                            inkscape:window-width="1247"
+                            inkscape:window-height="755"
+                            inkscape:window-x="0"
+                            inkscape:window-y="1"
+                            inkscape:window-maximized="1" />
+                        <metadata
+                            id="metadata7">
+                            <rdf:RDF>
+                            <cc:Work
+                                rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type
+                                rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title />
+                            </cc:Work>
+                            </rdf:RDF>
+                        </metadata>
+                        <g
+                            inkscape:label="Layer 1"
+                            inkscape:groupmode="layer"
+                            id="layer1"
+                            transform="translate(0,-852.36216)">
+                            <path
+                            style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 46.972093,991.50047 89.398497,0 0.50507,-30.80965 c 0.25254,-50.25509 -45.961932,-45.96194 -45.961932,-45.96194 -43.436559,0 -43.941635,38.13326 -43.941635,38.13326 z"
+                            id="path4142"
+                            inkscape:connector-curvature="0"
+                            sodipodi:nodetypes="cccccc" />
+                            <rect
+                            style="opacity:1;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="rect4142"
+                            width="90.913734"
+                            height="16.667542"
+                            x="46.214481"
+                            y="991.2478"
+                            rx="1.64704"
+                            ry="1.56199" />
+                            <rect
+                            style="opacity:1;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="rect4209"
+                            width="15.178572"
+                            height="16.428572"
+                            x="117.14286"
+                            y="991.29071"
+                            rx="1.6609303"
+                            ry="1.7735404" />
+                            <ellipse
+                            style="opacity:1;fill:#c65b84;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4229"
+                            cx="56.723225"
+                            cy="965.05566"
+                            rx="15.96176"
+                            ry="21.892153"
+                            transform="matrix(0.99717375,0.07513001,0.0187346,0.99982449,0,0)" />
+                            <ellipse
+                            style="opacity:1;fill:#ffaaaa;fill-opacity:0.1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4231"
+                            cx="-499.25079"
+                            cy="799.27252"
+                            rx="5.5357141"
+                            ry="14.642858"
+                            transform="matrix(0.77268444,-0.63479033,0.63479033,0.77268444,0,0)"
+                            inkscape:transform-center-x="6.0714286"
+                            inkscape:transform-center-y="1.4285714" />
+                            <ellipse
+                            style="opacity:1;fill:#b66b88;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4225"
+                            cx="89.821434"
+                            cy="967.005"
+                            rx="11.964286"
+                            ry="13.928573" />
+                            <ellipse
+                            style="opacity:1;fill:#c9809b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+                            id="path4227"
+                            cx="90.083199"
+                            cy="967.12573"
+                            rx="18.39031"
+                            ry="24.288219"
+                            transform="matrix(0.99999849,-0.00173693,0.01523936,0.99988387,0,0)" />
+                        </g>
+                        </svg>
+
+                    </div>
+                </div>
                 <div class="divider"></div>
                 <ul class="icon-list">
                     <li><i class="fas fa-arrow-right"></i>Já perdeu horas procurando fornecedores no Google ou Instagram e caiu em golpes.</li>
@@ -1026,47 +1328,6 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
         </div>
     </section>
 
-    <!-- Seção de bônus -->
-    <section class="bonus-section section">
-        <div class="container text-center">
-            <h2 class="section-heading">Garanta Seu Acesso Agora Mesmo E Ganhe 2 bônus exclusivos imediatamente…</h2>
-            <div class="divider"></div>
-            
-            <div class="bonus-grid">
-                <!-- Bônus 1 -->
-                <div class="bonus-card">
-                    <span class="bonus-badge">BÔNUS 1</span>
-                    <h3 class="bonus-title">BÔNUS #01</h3>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/Apple-Set-1.png" alt="Bônus 1" class="bonus-image">
-                    <p class="bonus-description">Descreva aqui o que é o Bônus.</p>
-                    <p class="bonus-price"><b>ESTE MATERIAL CUSTA R$ XX,XX</b></p>
-                    <div class="bonus-free">HOJE DE GRAÇA!</div>
-                </div>
-                
-                <!-- Bônus 2 -->
-                <div class="bonus-card">
-                    <span class="bonus-badge">BÔNUS 2</span>
-                    <h3 class="bonus-title">BÔNUS #02</h3>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/Apple-Set-1.png" alt="Bônus 2" class="bonus-image">
-                    <p class="bonus-description">Descreva aqui o que é o Bônus.</p>
-                    <p class="bonus-price"><b>ESTE MATERIAL CUSTA R$ XX,XX</b></p>
-                    <div class="bonus-free">HOJE DE GRAÇA!</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimento adicional -->
-    <section class="testimonial-section section">
-        <div class="container">
-            <div class="testimonial-card" style="max-width: 800px; margin: 0 auto;">
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar" style="width: 9%;">
-                <p class="testimonial-text">"Coloque aqui um depoimento que mostra a transformação que o produto gera na vida do seu cliente"</p>
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/people-1.png" alt="Cliente" class="testimonial-rating" style="width: 7%;">
-                <h3 class="testimonial-author">Nome</h3>
-            </div>
-        </div>
-    </section>
 
     <!-- Seção de garantia -->
     <section class="guarantee-section section">

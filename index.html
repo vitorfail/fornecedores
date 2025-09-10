@@ -197,10 +197,12 @@
             width: 100%;
             display: flex;
             align-items: center;
+            text-align: center;
             justify-content: center;
             flex-direction: column;
         }
         .testimonial-section .titulos h1{
+            text-align: center;
             font-size:40px;
             color: var(--primario);
         }
@@ -777,7 +779,20 @@
         }
         
         @media (max-width: 768px) {
-            .main-headline {
+            .testimonial-section .titulos p{
+                margin: 30px 0px;
+            }
+            .section-carousel .buttons{
+                width: 80%;
+            }
+            .section-carousel .buttons button{
+                width: 47%;
+                font-size: 14px;
+            }
+            .carousel{
+                height: 250px;
+            }
+            .main-headline,.testimonial-section .titulos h1 {
                 font-size: 34px;
             }
             
@@ -836,7 +851,6 @@
             
             .testimonial-card {
                 margin: 0 10px;
-                padding: 20px;
             }
             
             .testimonial-avatar {

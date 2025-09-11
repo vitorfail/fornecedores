@@ -220,10 +220,18 @@
         }
         
         .problem-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             background-color: #FFF2F1;
             border: 3px dashed #FFD2D2;
         }
-        
+        .problem-box .cta{
+            --cor: red;
+            animation: cta 0.8s ease-in-out infinite;
+            color: white;
+            background: red;
+        }
         .section-heading {
             font-family: 'Poppins', sans-serif;
             font-size: 36px;
@@ -288,7 +296,27 @@
             width: 100%;
             margin: 20px 0;
         }
-        
+        .divisoens{
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+        .divisoens img{
+            height: auto;
+            width: 40%;
+        }
+        .divisoens .text{
+            height: 400px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            padding-left: 40px;
+        }
         .cta-button {
             display: inline-block;
             background-color: #000000;
@@ -466,7 +494,7 @@
             align-items: center;
             margin-bottom: 5px;
             font-size: 18px;
-            color: #FFFFFF;
+            color: #60B866;
         }
         
         .offer-features i {
@@ -645,12 +673,12 @@
             display: flex;
             justify-content: space-between;
         }
-        .section-carousel .buttons button:hover{
+        .cta:hover{
             scale: 1.1;
             transition: all 0.4s ease-in-out;
             cursor: pointer;
         }
-        .section-carousel .buttons button{
+        .cta{
             border-radius: 10px;
             border: 0px;
             font-size: 17px;
@@ -658,11 +686,13 @@
             width: 250px;
             height: 70px;
         }
-        .section-carousel .buttons button:nth-child(1){
+        .section-carousel .buttons .cta:nth-child(1){
+            --cor:var(--primario);
+            animation: cta 0.8s ease-in-out infinite;
             color: white;
             background: linear-gradient(var(--primario), var(--secundario));
         }
-        .section-carousel .buttons button:nth-child(2){
+        .section-carousel .buttons .cta:nth-child(2){
             background: transparent;
             border: 2px solid var(--primario);
             color: var(--primario);
@@ -830,6 +860,12 @@
             .footer-logo {
                 width: 49%;
             }
+            .offer-title{
+                font-size: 26px;
+            }
+            .offer-current-price{
+                font-size: 26px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -859,6 +895,14 @@
             
             .testimonial-rating {
                 width: 25%;
+            }
+        }
+        @keyframes cta {
+            0% {
+                box-shadow: 0 0 0 0 var(--cor);
+            }
+            100% {
+                box-shadow: 0 0 0 18px rgba(52, 152, 219, 0);
             }
         }
     </style>
@@ -909,8 +953,8 @@
             <!-- Indicadores serão gerados pelo JavaScript -->
         </div>
         <div class="buttons">
-            <button>ACESSAR AGORA</button>
-            <button>CONHEÇA</button>
+            <button class="cta">ACESSAR AGORA</button>
+            <button class="cta">CONHEÇA</button>
         </div>
     </section>
     <!-- Seção de depoimentos -->
@@ -1201,10 +1245,27 @@
                     <li><i class="fas fa-arrow-right"></i>Não sabe precificar sem cortar a própria margem.</li>
                     <li><i class="fas fa-arrow-right"></i>Tem medo de investir errado e se frustrar.</li>
                 </ul>
+                <button class="cta">RESOLVA AGORA</button>
             </div>
         </div>
     </section>
-
+    <section class="section">
+        <div class="container">
+            <div class="divisoens">
+                <img src="livro.png">
+                <div class="text">
+                    <h1>Mapa dos 73 Livros</h1>
+                    <p>Explore cada um dos 73 livros da Bíblia de forma clara e estruturada, com resumos e elementos essenciais que facilitam o entendimento da Palavra de Deus.</p>
+                    <p>Em cada livro, você terá:</p>
+                    <p>Resumo do livro</p>
+                    <p>Simbologias e temas centrais</p>
+                    <p>Principais nomes</p>
+                    <p>Linha do tempo e eventos</p>
+                    <p>Versículos-chave</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Seção de solução -->
     <section class="solution-section section">
         <div class="container">
@@ -1224,7 +1285,7 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
     <section class="solution-section section">
         <div class="container">
             <div class="content-box">
-                <h2 class="section-heading">[Headline Reforço da Solução]</h2>
+                <h2 class="section-heading">👉 O passo a passo é simples:</h2>
                 <div class="divider"></div>
                 <p>[Reforce a solução mostrando que a pessoa precisa do seu produto para resolver definitivamente esse problema. Não cite o produto ainda]</p>
                 <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/image-2.png" alt="Imagem ilustrativa" class="product-image">
@@ -1288,7 +1349,6 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
                 <h2 class="section-heading">[apresente aqui o seu produto]</h2>
                 <div class="divider"></div>
                 <p>[Descreva o que é o seu produto, citando os benefícios, o resultado que a pessoa vai ter e quebrando a principal objeção]</p>
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/xfza.png" alt="Produto" class="product-image">
                 <ul class="icon-list benefits-list">
                     <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
                     <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
@@ -1304,7 +1364,6 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
     <section class="testimonial-section section">
         <div class="container">
             <div class="testimonial-card" style="max-width: 800px; margin: 0 auto;">
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar" style="width: 9%;">
                 <p class="testimonial-text">"Coloque aqui um depoimento que mostra a transformação que o produto gera na vida do seu cliente"</p>
                 <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/people-1.png" alt="Cliente" class="testimonial-rating" style="width: 7%;">
                 <h3 class="testimonial-author">Nome</h3>
@@ -1371,10 +1430,9 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
                 <!-- Oferta Premium -->
                 <div class="offer-card offer-premium">
                     <img src="logo.png" alt="Logo" class="offer-logo">
-                    <h3 class="offer-title">[NOME DO PRODUTO + OFERTA]</h3>
+                    <h3 class="offer-title">Lista de Fornecedores</h3>
                     <p class="offer-original-price">De R$ 197,00 por</p>
                     <h4 class="offer-current-price">APENAS R$ 97</h4>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/xfza.png" alt="Produto" class="offer-image">
                     <p class="offer-description">[RESUMA O QUE É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
                     
                     <ul class="offer-features">
@@ -1396,10 +1454,9 @@ Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem
                 <!-- Oferta Básica -->
                 <div class="offer-card">
                     <img src="logo.png" alt="Logo" class="offer-logo">
-                    <h3 class="offer-title">[NOME DO PRODUTO + OFERTA]</h3>
+                    <h3 class="offer-title">Lista de Fornecedores</h3>
                     <p class="offer-original-price">De R$ 97,00 por</p>
                     <h4 class="offer-current-price">APENAS R$ 47</h4>
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/xfza.png" alt="Produto" class="offer-image">
                     <p class="offer-description">[RESUMA O WHAT É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
                     
                     <ul class="offer-features">

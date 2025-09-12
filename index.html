@@ -209,7 +209,9 @@
         .problem-section, .solution-section, .proof-section, .benefits-section {
             background-color: #F8F7F4;
         }
-        
+        .whatsapp-fixed i{
+            color: white;
+        }
         .content-box {
             background-color: #FFFFFF;
             border-radius: 15px;
@@ -296,9 +298,26 @@
             width: 100%;
             margin: 20px 0;
         }
-        .divisoens{
+        .cabecalho h1{
+            padding: 30px 0px;
+            color: white;
+            text-align: center;
+            width: 60%;
+        }
+        .cabecalho{
+            margin-top: -50px;
             width: 100%;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secundario);
+        }
+        .uso{
+            background: url("fundo.png");
+        }
+        .divisoens{
+            margin: 30px 0px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -318,15 +337,15 @@
             padding-left: 40px;
         }
         .divisoens .text p:nth-of-type(1){
-            justify-content: right;
+            display: block;
             text-align: left;
-            align-items: flex-start;
         }
         .divisoens .text p{
             display: flex;
             text-align: center;
         }
         .divisoens .text i{
+            color: green;
             font-size: 25px;
             margin-right: 10px;
         }
@@ -620,6 +639,7 @@
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.473);
             position: relative;
             width: 600px;
+            aspect-ratio: 1/1;
             max-width: 800px;
             margin: 0 auto;
             overflow: hidden;
@@ -629,7 +649,7 @@
         .carousel {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            height: 450px;
+            height: 100%;
         }
 
         .carousel-item {
@@ -822,6 +842,15 @@
         }
         
         @media (max-width: 768px) {
+            .divisoens{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .carousel-container{
+                width: 90%;
+            }
             .testimonial-section .titulos p{
                 margin: 30px 0px;
             }
@@ -833,7 +862,15 @@
                 font-size: 14px;
             }
             .carousel{
-                height: 250px;
+            }
+            .divisoens img, .divisoens .text{
+                width: 80%;
+            }
+            .divisoens .text{
+                padding: 0;
+            }
+            .cabecalho h1{
+                font-size: 20px;
             }
             .main-headline,.testimonial-section .titulos h1 {
                 font-size: 34px;
@@ -1262,19 +1299,33 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section uso">
+            <div class="cabecalho">
+                <h1>Você vai encontrar bons fornecedores para revender e lucrar, com acesso direto aos contatos e preços exclusivos.</h1>
+            </div>
         <div class="container">
             <div class="divisoens">
-                <img src="livro.png">
+                <img src="modelo1.png">
                 <div class="text">
                     <h1>O que é o Produto?</h1>
-                    <p>Uma Lista de Fornecedores que inclui contatos validados e detalhados de fornecedores</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Diversos nichos como:</p>
+                    <p>Uma <strong>Lista de Fornecedores</strong>  que inclui contatos validados e detalhados de fornecedores</p>
+                    <p>Diversos nichos como:</p>
                     <p><i class="fa-solid fa-circle-check"></i>Cosméticos e maquiagem</p>
                     <p><i class="fa-solid fa-circle-check"></i>Roupas femininas e infantis</p>
                     <p><i class="fa-solid fa-circle-check"></i>Moda íntima</p>
                     <p><i class="fa-solid fa-circle-check"></i>Calçados (tênis e sandálias)</p>
                     <p><i class="fa-solid fa-circle-check"></i>Acessórios em geral</p>
+                </div>
+            </div>
+            <div class="divisoens">
+                <img src="modelo2.png">
+                <div class="text">
+                    <h1>Metodologia</h1>
+                    <p>Os fornecedores foram selecionados com base em experiência real de compra, com foco em:</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Preço competitivo</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Qualidade dos produtos</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Confiabilidade na entrega</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Atendimento</p>
                 </div>
             </div>
         </div>
@@ -1283,13 +1334,13 @@
     <section class="solution-section section">
         <div class="container">
             <div class="content-box">
-                <h2 class="section-heading">Conheça nossa Solução</h2>
+                <h2 class="section-heading">Match perfeito</h2>
                 <div class="divider"></div>
-                <p>✨ Imagine ter em mãos uma lista organizada, validada e completa com os melhores fornecedores do Brasil — com produtos já testados, margem de lucro alta e scripts prontos para você negociar e vender.
-Com a <strong>Lista de Fornecedores (Variados)</strong> para Mulheres, você tem clareza sobre:</p>
-                <p>Onde comprar com segurança.</p>
-                <p>Como negociar mesmo começando pequena.</p>
-                <p>Como validar suas vendas em até 48 horas.</p>
+                <p><strong>Você é:</strong></p>
+                <p><i class="fa-brands fa-sellsy"></i>Pessoas que desejam iniciar no ramo da revenda.</p>
+                <p><i class="fa-solid fa-cart-shopping"></i>Donos de lojas físicas ou online que querem aumentar o lucro.</p>
+                <p><i class="fa-solid fa-bag-shopping"></i>Empreendedores que buscam fornecedores de confiança. </p>
+                <p><i class="fa-solid fa-basket-shopping"></i>Interessados em comprar produtos para uso pessoal com desconto.</p>
             </div>
         </div>
     </section>

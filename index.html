@@ -138,7 +138,11 @@
         .testimonial-section {
             background-color: #F8F7F3;
         }
-        
+        .testimonial-section .container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -979,21 +983,21 @@
     <!-- Seção de vídeo -->
     <section class="section-carousel">
         <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-item">
+            <div id="carousel" class="carousel">
+                <div name="carousel-item" class="carousel-item">
                     <img src="lista.png" alt="Paisagem 1">
                 </div>
-                <div class="carousel-item">
+                <div name="carousel-item" class="carousel-item">
                     <img src="lista2.png
                     " alt="Paisagem 2">
                 </div>
-                <div class="carousel-item">
+                <div name="carousel-item" class="carousel-item">
                     <img src="lista3.png" alt="Paisagem 3">
                 </div>
-                <div class="carousel-item">
+                <div name="carousel-item" class="carousel-item">
                     <img src="lista4.png" alt="Paisagem 4">
                 </div>
-                <div class="carousel-item">
+                <div name="carousel-item" class="carousel-item">
                     <img src="lista5.png" alt="Paisagem 5">
                 </div>
             </div>
@@ -1331,108 +1335,37 @@
         </div>
     </section>
     <!-- Seção de solução -->
-    <section class="solution-section section">
-        <div class="container">
-            <div class="content-box">
-                <h2 class="section-heading">Match perfeito</h2>
-                <div class="divider"></div>
-                <p><strong>Você é:</strong></p>
-                <p><i class="fa-brands fa-sellsy"></i>Pessoas que desejam iniciar no ramo da revenda.</p>
-                <p><i class="fa-solid fa-cart-shopping"></i>Donos de lojas físicas ou online que querem aumentar o lucro.</p>
-                <p><i class="fa-solid fa-bag-shopping"></i>Empreendedores que buscam fornecedores de confiança. </p>
-                <p><i class="fa-solid fa-basket-shopping"></i>Interessados em comprar produtos para uso pessoal com desconto.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Seção de reforço da solução -->
-    <section class="solution-section section">
-        <div class="container">
-            <div class="content-box">
-                <h2 class="section-heading">👉 O passo a passo é simples:</h2>
-                <div class="divider"></div>
-                <p>[Reforce a solução mostrando que a pessoa precisa do seu produto para resolver definitivamente esse problema. Não cite o produto ainda]</p>
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/image-2.png" alt="Imagem ilustrativa" class="product-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de prova social -->
-    <section class="proof-section section">
-        <div class="container">
-            <div class="content-box">
-                <h2 class="section-heading">[headline de prova]</h2>
-                <div class="divider"></div>
-                <ul class="icon-list proof-list">
-                    <li><i class="fas fa-arrow-right"></i> <b>Coloque um elemento de prova (estatística, notícias, argumento lógico ou depoimento).</b></li>
-                    <li><i class="fas fa-arrow-right"></i> <b>Coloque um elemento de prova (estatística, notícias, argumento lógico ou depoimento).</b></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimento em destaque -->
-    <section class="testimonial-section section">
-        <div class="container">
-            <div class="testimonial-card" style="max-width: 800px; margin: 0 auto;">
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/361-061c9df6e91eff86b6db9fd4e400fcb6.png" alt="Aspas" class="testimonial-avatar" style="width: 9%;">
-                <p class="testimonial-text">"Coloque aqui um depoimento que mostra a transformação que o produto gera na vida do seu cliente"</p>
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/people-1.png" alt="Cliente" class="testimonial-rating" style="width: 7%;">
-                <h3 class="testimonial-author">Camila Borges<br><span style="font-weight: normal;">Clínica de Estética</span></h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de benefícios -->
-    <section class="benefits-section section">
-        <div class="container">
-            <div class="content-box">
-                <h2 class="section-heading">[headline de benefícios]</h2>
-                <div class="divider"></div>
-                <ul class="icon-list benefits-list">
-                    <li><i class="fas fa-arrow-right"></i> <b>Cite benefícios que o produto gera na vida do seu cliente.</b></li>
-                    <li><i class="fas fa-arrow-right"></i> <b>Cite benefícios que o produto gera na vida do seu cliente.</b></li>
-                    <li><i class="fas fa-arrow-right"></i> <b>Cite benefícios que o produto gera na vida do seu cliente.</b></li>
-                    <li><i class="fas fa-arrow-right"></i> <b>Cite benefícios que o produto gera na vida do seu cliente.</b></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de pergunta retórica -->
-    <section class="section">
-        <div class="container text-center">
-            <p>[REPITA A SUA PROMESSA EM FORMA DE PERGUNTA]</p>
-        </div>
-    </section>
-
-    <!-- Seção de apresentação do produto -->
-    <section class="section">
-        <div class="container">
-            <div class="content-box product-presentation">
-                <h2 class="section-heading">[apresente aqui o seu produto]</h2>
-                <div class="divider"></div>
-                <p>[Descreva o que é o seu produto, citando os benefícios, o resultado que a pessoa vai ter e quebrando a principal objeção]</p>
-                <ul class="icon-list benefits-list">
-                    <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
-                    <li><i class="fas fa-arrow-right"></i> Cite um benefício ou resultado.</li>
-                </ul>
-                <a href="#offer" class="cta-button">QUERO TER ACESSO</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Depoimento adicional -->
     <section class="testimonial-section section">
         <div class="container">
-            <div class="testimonial-card" style="max-width: 800px; margin: 0 auto;">
-                <p class="testimonial-text">"Coloque aqui um depoimento que mostra a transformação que o produto gera na vida do seu cliente"</p>
-                <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/people-1.png" alt="Cliente" class="testimonial-rating" style="width: 7%;">
-                <h3 class="testimonial-author">Nome</h3>
+            <h1>Quem compra Recomenda</h1>
+                <div class="carousel-container">
+                    <div id="carousel2" class="carousel">
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide1.jpeg" alt="Paisagem 1">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide2.jpeg
+                            " alt="Paisagem 2">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide3.jpeg" alt="Paisagem 3">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide4.jpeg" alt="Paisagem 4">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide5.jpeg" alt="Paisagem 5">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="carousel-indicators2" class="carousel-indicators">
+                    <!-- Indicadores serão gerados pelo JavaScript -->
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Seção de conteúdo -->
@@ -1652,9 +1585,9 @@
             dateElement.style.fontSize = '16px';
             
 
-             // Elementos do DOM
-            const carousel = document.querySelector('.carousel');
-            const items = document.querySelectorAll('.carousel-item');
+// Carrossel 1 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            const carousel = document.getElementById('carousel');
+            const items = document.getElementsByName('carousel-item');
 
             const indicatorsContainer = document.getElementById('carousel-indicators');
 
@@ -1693,7 +1626,6 @@
                 });
             }
             setInterval(function() {
-                console.log(currentIndex+"----"+items.length)
                 if(currentIndex+1==items.length ){
                     currentIndex=0
                     goToSlide(0)
@@ -1702,7 +1634,55 @@
                     goToSlide(currentIndex+1)
                 }
             }, 3000);
+// Carrossel 2 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            const carousel2 = document.getElementById('carousel2');
+            const items2 = document.getElementsByName('carousel-items');
+
+            const indicatorsContainer2 = document.getElementById('carousel-indicators2');
+            console.log(carousel2.length)
+                        // Variáveis de estado
+            let currentIndex2 = 0;
+            let isPlaying2 = true;
+            let intervalTime2 = 5000; // 5 segundos
+            let slideInterval2;
+            items2.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    goToSlide2(index);
+                });
+                indicatorsContainer2.appendChild(indicator);
+            });
             
+            const indicators2 = document.querySelectorAll('.indicator');
+             function goToSlide2(index) {
+                currentIndex2 = index;
+                updateCarousel2();
+            }
+            
+            // Atualizar o carrossel e os indicadores
+            function updateCarousel2() {
+                carousel2.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Atualizar indicadores
+                indicators2.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            setInterval(function() {
+                if(currentIndex+1==items.length ){
+                    currentIndex=0
+                    goToSlide2(0)
+                }
+                else{
+                    goToSlide2(currentIndex+1)
+                }
+            }, 3000);
         });
     </script>
 </body>

@@ -138,6 +138,30 @@
         .testimonial-section {
             background-color: #F8F7F3;
         }
+        #container2{
+            width: 70%;
+            max-width: 100%;
+        }
+        #container2 h1{
+            font-size: 40px;
+        }
+        #container2 h1 strong{
+            color: var(--primario);
+        }
+        #carousel2{
+            align-items: center;
+        }
+        #container2 .carousel-container{
+            width: 100%;
+            max-width: 100%;
+            box-shadow: none;
+            aspect-ratio: auto;
+        }
+        #container2 .carousel-item{
+            min-width: 29%;
+            height: 20%;
+            margin: 0px 2%;
+        }
         .testimonial-section .container{
             display: flex;
             align-items: center;
@@ -234,9 +258,22 @@
         }
         .problem-box .cta{
             --cor: red;
-            animation: cta 0.8s ease-in-out infinite;
             color: white;
             background: red;
+        }
+        .cta{
+            border-radius: 1px;
+            border: 0px;
+            font-size: 17px;
+            font-weight: bold;
+            width: 250px;
+            height: 70px;
+            background: var(--primario);
+            animation: cta 0.8s ease-in-out infinite;
+        }
+        .cta i{
+            color: white;
+            padding-right: 10px;
         }
         .section-heading {
             font-family: 'Poppins', sans-serif;
@@ -715,14 +752,7 @@
             transition: all 0.4s ease-in-out;
             cursor: pointer;
         }
-        .cta{
-            border-radius: 10px;
-            border: 0px;
-            font-size: 17px;
-            font-weight: bold;
-            width: 250px;
-            height: 70px;
-        }
+
         .section-carousel .buttons .cta:nth-child(1){
             --cor:var(--primario);
             animation: cta 0.8s ease-in-out infinite;
@@ -1299,7 +1329,7 @@
                     <li><i class="fas fa-arrow-right"></i>Não sabe precificar sem cortar a própria margem.</li>
                     <li><i class="fas fa-arrow-right"></i>Tem medo de investir errado e se frustrar.</li>
                 </ul>
-                <button class="cta">RESOLVA AGORA</button>
+                <button class="cta"><i class="fa-solid fa-people-arrows"></i>RESOLVA AGORA</button>
             </div>
         </div>
     </section>
@@ -1339,8 +1369,10 @@
 
     <!-- Depoimento adicional -->
     <section class="testimonial-section section">
-        <div class="container">
-            <h1>Quem compra Recomenda</h1>
+        <div id="container2" class="container">
+            <h1>Quem compra <strong>Recomenda</strong></h1>
+            <p>Se junte a nossa rede de clientes satisfeitos e amplie seus negócios!</p>
+            <button style="--cor:var(--primario); margin-top: 30px; color: white;" class="cta"><i class="fa-solid fa-cart-shopping"></i>FAÇA PARTE</button>
                 <div class="carousel-container">
                     <div id="carousel2" class="carousel">
                         <div name="carousel-items" class="carousel-item">
@@ -1351,6 +1383,18 @@
                             " alt="Paisagem 2">
                         </div>
                         <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide7.jpg" alt="Paisagem 3">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide4.jpeg" alt="Paisagem 4">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide5.jpeg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 2">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
                             <img src="slides-carrosel2/slide3.jpeg" alt="Paisagem 3">
                         </div>
                         <div name="carousel-items" class="carousel-item">
@@ -1358,6 +1402,15 @@
                         </div>
                         <div name="carousel-items" class="carousel-item">
                             <img src="slides-carrosel2/slide5.jpeg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide6.jpeg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide7.jpg" alt="Paisagem 5">
                         </div>
                     </div>
                 </div>
@@ -1377,19 +1430,19 @@
             <div class="divider"></div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Descreva o que a pessoa vai ter/aprender/conseguir ao comprar seu produto.</p>
+                <p>✅ Acesso imediato à lista digital de fornecedores nacionais e internacionais.</p>
             </div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Descreva o que a pessoa vai ter/aprender/conseguir ao comprar seu produto.</p>
+                <p>✅ Garantia de 7 dias.</p>
             </div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Descreva o que a pessoa vai ter/aprender/conseguir ao comprar seu produto.</p>
+                <p>✅ Atualizações da lista sem custo adicional.</p>
             </div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Descreva o que a pessoa vai ter/aprender/conseguir ao comprar seu produto.</p>
+                <p>✅ Instruções para entrar em contato com os fornecedores e iniciar as compras.</p>
             </div>
             
             <p>E <strong>muito mais</strong>...</p>
@@ -1404,7 +1457,7 @@
         <div class="container">
             <div class="guarantee-content">
                 <div class="guarantee-image">
-                    <img src="https://lp.primeirodogoogle.com.br/wp-content/uploads/2024/11/30d-1.webp" alt="Garantia de 30 dias" style="width: 100%;">
+                    <img src="garantia.png" alt="Garantia de 30 dias" style="width: 100%;">
                 </div>
                 <div class="guarantee-text">
                     <h2 class="section-heading">GARANTIA DE RESULTADO!<br><span style="font-weight: normal;">O risco é todo nosso.</span></h2>
@@ -1419,8 +1472,8 @@
     <section id="offer" class="offer-section">
         <div class="container text-center">
             <img src="logo.png" alt="Logo" class="hero-logo">
-            <h2 class="section-heading">Chega de [problemas que eles passam]</h2>
-            <p>Tenha <strong>acesso ao [PRODUTO] para [RESULTADO DESEJADO]</strong></p>
+            <h2 class="section-heading">Chega de Fornecedores caros!</h2>
+            <p>Tenha <strong>acesso a nossa Lista VIP</strong></p>
             <div class="divider"></div>
             
             <div class="offer-grid">
@@ -1433,13 +1486,11 @@
                     <p class="offer-description">[RESUMA O QUE É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
                     
                     <ul class="offer-features">
-                        <li><i class="fas fa-check-square"></i> Entregável 01</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 02</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 03</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 04</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 05</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 06</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 07</li>
+                        <li><i class="fas fa-check-square"></i> Acesso imediato à lista digital de fornecedores nacionais e internacionais.</li>
+                        <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
+                        <li><i class="fas fa-check-square"></i> Atualizações da lista sem custo adicional.</li>
+                        <li><i class="fas fa-check-square"></i> Suporte via WhatsApp.</li>
+                        <li><i class="fas fa-check-square"></i> Instruções para entrar em contato com os fornecedores e iniciar as compras.</li>
                         <li><i class="fas fa-check-square"></i> 30 Dias de Garantia</li>
                         <li><i class="fas fa-check-square"></i> Acesso Vitalício</li>
                     </ul>
@@ -1457,12 +1508,13 @@
                     <p class="offer-description">[RESUMA O WHAT É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
                     
                     <ul class="offer-features">
-                        <li><i class="fas fa-check-square"></i> Entregável 01</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 02</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 03</li>
-                        <li><i class="fas fa-check-square"></i> Entregável 04</li>
+                        <li><i class="fas fa-check-square"></i> Acesso imediato à lista digital de fornecedores nacionais e internacionais.</li>
+                        <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
+                        <li><i class="fas fa-check-square"></i> Atualizações da lista sem custo adicional.</li>
+                        <li><i class="fas fa-check-square"></i> Suporte via WhatsApp.</li>
+                        <li><i class="fas fa-check-square"></i> Instruções para entrar em contato com os fornecedores e iniciar as compras.</li>
                         <li><i class="fas fa-check-square"></i> 30 Dias de Garantia</li>
-                        <li><i class="fas fa-check-square"></i> 1 Ano de Acesso</li>
+                        <li><i class="fas fa-check-square"></i> Acesso Vitalício</li>
                     </ul>
                     
                     <a href="https://seguro.primeirodogoogle.com.br/r/1J7MX7P5ZL" class="cta-button offer-cta">COMPRAR AGORA</a>
@@ -1639,20 +1691,21 @@
             const items2 = document.getElementsByName('carousel-items');
 
             const indicatorsContainer2 = document.getElementById('carousel-indicators2');
-            console.log(carousel2.length)
                         // Variáveis de estado
             let currentIndex2 = 0;
             let isPlaying2 = true;
             let intervalTime2 = 5000; // 5 segundos
             let slideInterval2;
             items2.forEach((_, index) => {
-                const indicator = document.createElement('div');
-                indicator.classList.add('indicator');
-                if (index === 0) indicator.classList.add('active');
-                indicator.addEventListener('click', () => {
-                    goToSlide2(index);
-                });
-                indicatorsContainer2.appendChild(indicator);
+                if(index <= items2.length-2){
+                    const indicator = document.createElement('div');
+                    indicator.classList.add('indicator');
+                    if (index === 0) indicator.classList.add('active');
+                    indicator.addEventListener('click', () => {
+                        goToSlide2(index);
+                    });
+                    indicatorsContainer2.appendChild(indicator);
+                }
             });
             
             const indicators2 = document.querySelectorAll('.indicator');
@@ -1663,11 +1716,11 @@
             
             // Atualizar o carrossel e os indicadores
             function updateCarousel2() {
-                carousel2.style.transform = `translateX(-${currentIndex * 100}%)`;
+                carousel2.style.transform = `translateX(-${currentIndex2* 33}%)`;
                 
                 // Atualizar indicadores
                 indicators2.forEach((indicator, index) => {
-                    if (index === currentIndex) {
+                    if (index-5 === currentIndex2) {
                         indicator.classList.add('active');
                     } else {
                         indicator.classList.remove('active');
@@ -1675,7 +1728,7 @@
                 });
             }
             setInterval(function() {
-                if(currentIndex+1==items.length ){
+                if(currentIndex2+1==items2.length ){
                     currentIndex=0
                     goToSlide2(0)
                 }

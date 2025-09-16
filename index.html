@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transforme ideias em Produtos Lucrativos</title>
@@ -876,6 +878,32 @@
         }
         
         @media (max-width: 768px) {
+            #container2{
+                width: 100%;
+            }
+            #container2 h1, #container2 p{
+                padding: 20px 0px;
+                text-align: center;
+                line-height: 1;
+                width: 80%;
+            }
+            #container2 .carousel{
+                margin-top: 30px;
+                width: 100%;
+            }
+            #container2 .carousel-container{
+                height: 400px;
+            }
+            #container2 .carousel-item{
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+                margin: 0;
+            }
+            #container2 .carousel-item img{
+                width: 100%;
+                height: auto;
+            }
             .divisoens{
                 display: flex;
                 flex-direction: column;
@@ -1426,7 +1454,7 @@
         <div class="container text-center">
             <img src="logo.png" alt="Logo" class="hero-logo">
             <h2 class="section-heading">o que você vai aprender</h2>
-            <p>Apenas uma <b>pequena prévia</b> do que você <b>terá acesso</b> com o <b>[Nome do Produto]:</b></p>
+            <p>Apenas uma <b>pequena prévia</b> do que você <b>terá acesso</b> com a <b>Lista de Fornecedores:</b></p>
             <div class="divider"></div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
@@ -1462,7 +1490,7 @@
                 <div class="guarantee-text">
                     <h2 class="section-heading">GARANTIA DE RESULTADO!<br><span style="font-weight: normal;">O risco é todo nosso.</span></h2>
                     <p>Após a aprovação do pagamento, <strong>você terá até 30 dias corridos a partir da matrícula para experimentar o programa</strong>, e, em caso de insatisfação, pedir a restituição integral dos valores pagos - bastando, para tanto, entrar no sistema, ir até suas compras e <strong>solicitar o reembolso</strong>. Não é necessário <strong>nenhuma justificativa</strong>.</p>
-                    <p><strong>Você pode experimentar o [NOME DO PRODUTO] e não corre nenhum risco!</strong></p>
+                    <p><strong>Você pode experimentar a Lista Vip e não corre nenhum risco!</strong></p>
                 </div>
             </div>
         </div>
@@ -1548,7 +1576,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Não necessariamente. Mas é ideal que tenha um pouco de conhecimento prévio de vendas.</p>
                     </div>
                 </div>
                 
@@ -1716,16 +1744,31 @@
             
             // Atualizar o carrossel e os indicadores
             function updateCarousel2() {
-                carousel2.style.transform = `translateX(-${currentIndex2* 33}%)`;
+                if(window.innerWidth <= 768){
+                    carousel2.style.transform = `translateX(-${currentIndex2* 100}%)`;
                 
-                // Atualizar indicadores
-                indicators2.forEach((indicator, index) => {
-                    if (index-5 === currentIndex2) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
+                    // Atualizar indicadores
+                    indicators2.forEach((indicator, index) => {
+                        if (index-5 === currentIndex2) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+                }
+                else{
+                    carousel2.style.transform = `translateX(-${currentIndex2* 33}%)`;
+                    
+                    // Atualizar indicadores
+                    indicators2.forEach((indicator, index) => {
+                        if (index-5 === currentIndex2) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+                }
+
             }
             setInterval(function() {
                 if(currentIndex2+1==items2.length ){

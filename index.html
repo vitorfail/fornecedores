@@ -96,7 +96,7 @@
             margin: 20px 0px;
         }
         .avaliacao{
-            width: 22%;
+            width: 9%;
             height: auto;
         }
         .target-audience {
@@ -114,11 +114,13 @@
         
         .main-headline {
             font-family: 'Poppins', sans-serif;
-            font-size: 72px;
+            font-size: 50px;
+            width: 70%;
             font-weight: 700;
+            line-height: 1;
             color: #1F2041;
             text-align: center;
-            margin: 10px 0;
+            margin: 20px 0;
         }
         
         .subheadline {
@@ -279,6 +281,9 @@
             color: white;
             padding-right: 10px;
         }
+        .guarantee-text .section-heading{
+            color: green;
+        }
         .section-heading {
             font-family: 'Poppins', sans-serif;
             font-size: 36px;
@@ -387,7 +392,7 @@
         }
         .divisoens .text p{
             display: flex;
-            text-align: center;
+            text-align: left;
         }
         .divisoens .text i{
             color: green;
@@ -491,19 +496,22 @@
         }
         
         .guarantee-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             gap: 40px;
             align-items: center;
         }
         
         .guarantee-image {
-            width: 70%;
+            width: 40%;
             margin: 0 auto;
         }
         
         .guarantee-text {
-            text-align: left;
+            width: 60%;
+            text-align: justify;
         }
         
         .offer-section {
@@ -520,17 +528,71 @@
         }
         
         .offer-card {
-            background: linear-gradient(47deg, #242424 0%, #000000 70%);
-            border-radius: 15px;
+            background: white;
+            position: relative;
+            border: 5px solid rgb(49, 49, 255);
+            border-radius: 10px;
             padding: 25px;
             text-align: center;
             margin: 20px;
+            color: black;
         }
         
         .offer-premium {
-            background: linear-gradient(47deg, #242424 0%, #000000 70%);
+            border: 5px solid green;
         }
-        
+        .ribbon {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        position: absolute;
+        }
+        .ribbon::before,
+        .ribbon::after {
+        position: absolute;
+        content: '';
+        display: block;
+        border: 5px solid #2980b9;
+        }
+        .ribbon span {
+              box-shadow:0 0 0 3px #3498db,  0px 21px 5px -18px rgba(0,0,0,0.6);
+        position: absolute;
+        display: block;
+        width: 245px;
+        padding: 15px 15px;
+        border: 1px dashed;
+        background: radial-gradient(circle, #099cff 10%, #0f81cd 80%, #026cb3 10%);
+        color: #fff;
+        font: 700 18px/1 'Lato', sans-serif;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        text-transform: uppercase;
+        text-align: center;
+        }
+
+        /* top left*/
+        .ribbon-top-left {
+        top: -10px;
+        left: -10px;
+        }
+        .ribbon-top-left::before,
+        .ribbon-top-left::after {
+        }
+        .ribbon-top-left::before {
+        top: 0;
+        right: 0;
+        }
+        .ribbon-top-left::after {
+        bottom: 0;
+        left: 0;
+        }
+        .ribbon-top-left span {
+        right: -25px;
+        top: 30px;
+        z-index: 1;
+        transform: rotate(-45deg);
+        }
+
+
         .offer-logo {
             width: 30%;
             margin: 0 auto;
@@ -540,7 +602,6 @@
             font-family: 'Barlow', sans-serif;
             font-size: 30px;
             font-weight: 900;
-            color: #FFFFFF;
             margin: 15px 0;
         }
         
@@ -553,14 +614,12 @@
             font-family: 'Inter', sans-serif;
             font-size: 14px;
             font-weight: 400;
-            color: #FFFFFF;
             margin-bottom: 15px;
         }
         
         .offer-features {
             list-style: none;
             padding: 10px;
-            background-color: #F5F5F5;
             border-radius: 5px;
             margin: 15px 0;
             text-align: left;
@@ -571,7 +630,8 @@
             align-items: center;
             margin-bottom: 5px;
             font-size: 18px;
-            color: #60B866;
+            color: black;
+            font-weight: 700;
         }
         
         .offer-features i {
@@ -583,20 +643,22 @@
         .offer-original-price {
             font-family: 'Inter', sans-serif;
             font-size: 16px;
-            color: #FFFFFF;
             margin-bottom: 5px;
         }
-        
+        .offer-current-price strong{
+            color: green;
+        }        
         .offer-current-price {
             font-family: 'Barlow', sans-serif;
             font-size: 47px;
             font-weight: 800;
-            color: #FFFFFF;
             margin: 0;
         }
-        
-        .offer-cta {
+        .offer-premium .offer-cta{
             background-color: #39CC83;
+        }
+        .offer-cta {
+            background: rgb(84, 84, 255);
             width: 100%;
             font-size: 26px;
             padding: 20px;
@@ -880,6 +942,9 @@
         }
         
         @media (max-width: 768px) {
+            .offer-features li{
+                font-size: 12px;
+            }
             #container2{
                 width: 100%;
             }
@@ -913,6 +978,12 @@
                 justify-content: center;
             }
             .carousel-container{
+                width: 70%;
+            }
+            .guarantee-image{
+                width: 70%;
+            }
+            .guarantee-text{
                 width: 90%;
             }
             .testimonial-section .titulos p{
@@ -979,7 +1050,13 @@
                 font-size: 26px;
             }
             .offer-current-price{
-                font-size: 26px;
+                font-size: 36px;
+            }
+            .icon-list li{
+                font-size: 15px;
+            }
+            .avaliacao{
+                width: 22%;
             }
         }
         
@@ -990,7 +1067,8 @@
             
             .hero-logo {
                 width: 18%;
-                margin: 10px 0px;
+                margin: 0px;
+                margin-top: 10px;
             }
             
             .main-headline {
@@ -1227,7 +1305,7 @@
                         </svg>
 
                     </div>
-                    <h2 class="section-heading">Sabemos dos seus problemas</h2>
+                    <h2 class="section-heading">Você já passou por isso?</h2>
                     <div class="svg">
                         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                         <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -1349,10 +1427,10 @@
                 </div>
                 <div class="divider"></div>
                 <ul class="icon-list">
-                    <li><i class="fas fa-arrow-right"></i>Já perdeu horas procurando fornecedores no Google ou Instagram e caiu em golpes.</li>
-                    <li><i class="fas fa-arrow-right"></i>Comprou produtos que encalharam e ficou com dinheiro preso.</li>
-                    <li><i class="fas fa-arrow-right"></i>Não sabe precificar sem cortar a própria margem.</li>
-                    <li><i class="fas fa-arrow-right"></i>Tem medo de investir errado e se frustrar.</li>
+                    <li><i class="fas fa-arrow-right"></i>Passa horas no Instagram tentando achar fornecedores?</li>
+                    <li><i class="fas fa-arrow-right"></i>Já caiu em golpe por falta de referência?</li>
+                    <li><i class="fas fa-arrow-right"></i>Comprou produtos que encalharam e ficou com dinheiro preso?</li>
+                    <li><i class="fas fa-arrow-right"></i>Tem medo de investir errado e jogar seu dinheiro fora?</li>
                 </ul>
                 <button class="cta"><i class="fa-solid fa-people-arrows"></i>RESOLVA AGORA</button>
             </div>
@@ -1367,24 +1445,25 @@
                 <img src="modelo1.png">
                 <div class="text">
                     <h1>O que é o Produto?</h1>
-                    <p>Uma <strong>Lista de Fornecedores</strong>  que inclui contatos validados e detalhados de fornecedores</p>
-                    <p>Diversos nichos como:</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Cosméticos e maquiagem</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Roupas femininas e infantis</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Moda íntima</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Calçados (tênis e sandálias)</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Acessórios em geral</p>
+                    <p>🔍 A Lista VIP é uma planilha digital, atualizada e organizada com:</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Nome da marca</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Nicho de atuação</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Média de valores por parceria</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Formas de contato (WhatsApp, DM, e-mail)</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Observações importantes (moq, envio, etc.)</p>
                 </div>
             </div>
             <div class="divisoens">
                 <img src="modelo2.png">
                 <div class="text">
-                    <h1>Metodologia</h1>
+                    <h1> Diferenciais Competitivos</h1>
                     <p>Os fornecedores foram selecionados com base em experiência real de compra, com foco em:</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Preço competitivo</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Qualidade dos produtos</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Confiabilidade na entrega</p>
-                    <p><i class="fa-solid fa-circle-check"></i>Atendimento</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Lista categorizada por nichos</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Atualizações gratuitas e vitalícias</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Fornecedores testados com compras reais</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Acesso vitalício e suporte via WhatsApp</p>
+                    <p><i class="fa-solid fa-circle-check"></i>Curadoria pensada para iniciantes e profissionais</p>
+
                 </div>
             </div>
         </div>
@@ -1459,24 +1538,26 @@
     <section class="section">
         <div class="container text-center">
             <img src="logo.png" alt="Logo" class="hero-logo">
-            <h2 class="section-heading">o que você vai aprender</h2>
+            <h2 class="section-heading">O que Você Vai Receber</h2>
             <p>Apenas uma <b>pequena prévia</b> do que você <b>terá acesso</b> com a <b>Lista de Fornecedores:</b></p>
             <div class="divider"></div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Acesso imediato à lista digital de fornecedores nacionais e internacionais.</p>
+                <p>✅ Lista digital com <strong>+100 fornecedores</strong> nacionais e internacionais.</p>
             </div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Garantia de 7 dias.</p>
+                <p>✅ Organização por nicho (moda, beleza, casa, kids…).</p>
             </div>
             
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Atualizações da lista sem custo adicional.</p>
+                <p>✅ Dados de contato verificados.</p>
             </div>
-            
             <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Instruções para entrar em contato com os fornecedores e iniciar as compras.</p>
+                <p>✅ Acesso vitalício</p>
+            </div>
+            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
+                <p>✅ Instruções para contato e negociação</p>
             </div>
             
             <p>E <strong>muito mais</strong>...</p>
@@ -1487,20 +1568,7 @@
 
 
     <!-- Seção de garantia -->
-    <section class="guarantee-section section">
-        <div class="container">
-            <div class="guarantee-content">
-                <div class="guarantee-image">
-                    <img src="garantia.png" alt="Garantia de 30 dias" style="width: 100%;">
-                </div>
-                <div class="guarantee-text">
-                    <h2 class="section-heading">GARANTIA DE RESULTADO!<br><span style="font-weight: normal;">O risco é todo nosso.</span></h2>
-                    <p>Após a aprovação do pagamento, <strong>você terá até 30 dias corridos a partir da matrícula para experimentar o programa</strong>, e, em caso de insatisfação, pedir a restituição integral dos valores pagos - bastando, para tanto, entrar no sistema, ir até suas compras e <strong>solicitar o reembolso</strong>. Não é necessário <strong>nenhuma justificativa</strong>.</p>
-                    <p><strong>Você pode experimentar a Lista Vip e não corre nenhum risco!</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Seção de oferta -->
     <section id="offer" class="offer-section">
@@ -1513,24 +1581,22 @@
             <div class="offer-grid">
                 <!-- Oferta Premium -->
                 <div class="offer-card offer-premium">
+                    <div class="ribbon ribbon-top-left"><span>Popular</span></div>
                     <img src="logo.png" alt="Logo" class="offer-logo">
                     <h3 class="offer-title">Lista de Fornecedores</h3>
                     <p class="offer-original-price">De R$ 197,00 por</p>
-                    <h4 class="offer-current-price">APENAS R$ 97</h4>
-                    <p class="offer-description">[RESUMA O QUE É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
+                    <h4 class="offer-current-price">APENAS <strong>R$ 97</strong></h4>
                     
                     <ul class="offer-features">
-                        <li><i class="fas fa-check-square"></i> Acesso imediato à lista digital de fornecedores nacionais e internacionais.</li>
                         <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
-                        <li><i class="fas fa-check-square"></i> Atualizações da lista sem custo adicional.</li>
                         <li><i class="fas fa-check-square"></i> Suporte via WhatsApp.</li>
                         <li><i class="fas fa-check-square"></i> Instruções para entrar em contato com os fornecedores e iniciar as compras.</li>
-                        <li><i class="fas fa-check-square"></i> 30 Dias de Garantia</li>
+                        <li><i class="fas fa-check-square"></i> 7 Dias de Garantia</li>
                         <li><i class="fas fa-check-square"></i> Acesso Vitalício</li>
                     </ul>
                     
                     <a href="https://seguro.primeirodogoogle.com.br/r/KAWB6UV2O1" class="cta-button offer-cta">COMPRAR AGORA</a>
-                    <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 30 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
+                    <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 7 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
                 </div>
                 
                 <!-- Oferta Básica -->
@@ -1538,26 +1604,35 @@
                     <img src="logo.png" alt="Logo" class="offer-logo">
                     <h3 class="offer-title">Lista de Fornecedores</h3>
                     <p class="offer-original-price">De R$ 97,00 por</p>
-                    <h4 class="offer-current-price">APENAS R$ 47</h4>
-                    <p class="offer-description">[RESUMA O WHAT É O PRODUTO, CITANDO O RESULTADO E OS BENEFÍCIOS]</p>
+                    <h4 class="offer-current-price">APENAS <strong>R$ 47</strong></h4>
                     
                     <ul class="offer-features">
-                        <li><i class="fas fa-check-square"></i> Acesso imediato à lista digital de fornecedores nacionais e internacionais.</li>
                         <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
-                        <li><i class="fas fa-check-square"></i> Atualizações da lista sem custo adicional.</li>
                         <li><i class="fas fa-check-square"></i> Suporte via WhatsApp.</li>
                         <li><i class="fas fa-check-square"></i> Instruções para entrar em contato com os fornecedores e iniciar as compras.</li>
-                        <li><i class="fas fa-check-square"></i> 30 Dias de Garantia</li>
+                        <li><i class="fas fa-check-square"></i> 7 Dias de Garantia</li>
                         <li><i class="fas fa-check-square"></i> Acesso Vitalício</li>
                     </ul>
                     
                     <a href="https://seguro.primeirodogoogle.com.br/r/1J7MX7P5ZL" class="cta-button offer-cta">COMPRAR AGORA</a>
-                    <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 30 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
+                    <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 7 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="guarantee-section section">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-image">
+                    <img src="garantia.png" alt="Garantia de 7 dias" style="width: 100%;">
+                </div>
+                <div class="guarantee-text">
+                    <h2 class="section-heading">7 DIAS DE GARANTIA<br><span style="font-weight: normal;">O risco é todo nosso.</span></h2>
+                    <p>Após a aprovação do pagamento, <strong>você terá até 7 dias corridos a partir da matrícula para experimentar o programa</strong>, e, em caso de insatisfação, pedir a restituição integral dos valores pagos </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Seção de perguntas frequentes -->
     <section class="faq-section section">
         <div class="container text-center">
@@ -1568,51 +1643,51 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        Eu quero, mas o que exatamente vou receber?
+                        O que exatamente recebo ao comprar?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Irá receber uma lista de fornecedores com os melhores valores para revenda.</p>
+                        <p> Uma planilha digital com +100 fornecedores segmentados por nicho, com contato direto e detalhes para parceria.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Preciso ter experiência para aplicar?
+                        Preciso ter experiência para usar?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Não Necessariamente, mas é ideal que tenha um bom conhecimento de vendas.</p>
+                        <p>Não! A lista foi feita para iniciantes e avançados.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Para quem é esse produto?
+                        O acesso é imediato?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Para todos aqueles que estão tentando entrar no mercado varejista.</p>
+                        <p> Sim! Assim que o pagamento for aprovado, você recebe por e-mail.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Como entro em contato em caso de problemas?
+                        Posso acessar de qualquer dispositivo?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Pode entrar em contato com nosso número de telefone.</p>
+                        <p> Sim, celular, tablet ou computador.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Como vou receber o acesso?
+                        E se eu não gostar?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Assim que fizer o pagamento pelo link.</p>
+                        <p> Você tem 7 dias de garantia total para pedir reembolso.</p>
                     </div>
                 </div>
             </div>
@@ -1636,6 +1711,7 @@
     <a href="https://api.whatsapp.com/send/?phone=5547991715818&amp;text=Ol%C3%A1%2C+vim+pelo+site+da+MSSulInoxcorrimaos%2C+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" class="whatsapp-fixed">
         <i class="fab fa-whatsapp whatsapp-icon"></i>
     </a>
+    
     <script>
         // Script para as FAQs
         document.querySelectorAll('.faq-question').forEach(question => {

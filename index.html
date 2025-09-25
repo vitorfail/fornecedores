@@ -4,7 +4,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transforme ideias em Produtos Lucrativos</title>
+    <title>Lista VIP</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@300;400&family=Barlow:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -520,9 +520,10 @@
         }
         
         .offer-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
             gap: 20px;
+            align-items: center;
+            justify-content: center;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -534,7 +535,8 @@
             border-radius: 10px;
             padding: 25px;
             text-align: center;
-            margin: 20px;
+            margin: 0px;
+            width: 60%;
             color: black;
         }
         
@@ -942,6 +944,12 @@
         }
         
         @media (max-width: 768px) {
+            .offer-card{
+                width: 95%;            
+            }
+            .container{
+                padding: 0px 10px;
+            }
             .offer-features li{
                 font-size: 12px;
             }
@@ -1026,9 +1034,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .bonus-grid, .offer-grid {
-                grid-template-columns: 1fr;
-            }
             
             .content-box {
                 padding: 25px;
@@ -1056,7 +1061,12 @@
                 font-size: 15px;
             }
             .avaliacao{
-                width: 22%;
+                width: 30%;
+            }
+            .divisoens .text{
+                height: auto;
+            }.divisoens .text p{
+                margin: 10px 0px;
             }
         }
         
@@ -1072,11 +1082,12 @@
             }
             
             .main-headline {
+                width: 100%;
                 font-size: 34px;
             }
             
             .section-heading {
-                font-size: 28px;
+                font-size: 35px;
             }
             
             .testimonial-card {
@@ -1598,25 +1609,6 @@
                     <a href="https://seguro.primeirodogoogle.com.br/r/KAWB6UV2O1" class="cta-button offer-cta">COMPRAR AGORA</a>
                     <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 7 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
                 </div>
-                
-                <!-- Oferta Básica -->
-                <div class="offer-card">
-                    <img src="logo.png" alt="Logo" class="offer-logo">
-                    <h3 class="offer-title">Lista de Fornecedores</h3>
-                    <p class="offer-original-price">De R$ 97,00 por</p>
-                    <h4 class="offer-current-price">APENAS <strong>R$ 47</strong></h4>
-                    
-                    <ul class="offer-features">
-                        <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
-                        <li><i class="fas fa-check-square"></i> Suporte via WhatsApp.</li>
-                        <li><i class="fas fa-check-square"></i> Instruções para entrar em contato com os fornecedores e iniciar as compras.</li>
-                        <li><i class="fas fa-check-square"></i> 7 Dias de Garantia</li>
-                        <li><i class="fas fa-check-square"></i> Acesso Vitalício</li>
-                    </ul>
-                    
-                    <a href="https://seguro.primeirodogoogle.com.br/r/1J7MX7P5ZL" class="cta-button offer-cta">COMPRAR AGORA</a>
-                    <p class="offer-security"><strong>Compra segura</strong> com <strong>garantia de 7 dias.</strong><br />Receba seu acesso imediatamente após a confirmação do pagamento.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1627,7 +1619,7 @@
                     <img src="garantia.png" alt="Garantia de 7 dias" style="width: 100%;">
                 </div>
                 <div class="guarantee-text">
-                    <h2 class="section-heading">7 DIAS DE GARANTIA<br><span style="font-weight: normal;">O risco é todo nosso.</span></h2>
+                    <h2 class="section-heading">7 Dias de Garantia<br></h2>
                     <p>Após a aprovação do pagamento, <strong>você terá até 7 dias corridos a partir da matrícula para experimentar o programa</strong>, e, em caso de insatisfação, pedir a restituição integral dos valores pagos </p>
                 </div>
             </div>

@@ -252,9 +252,15 @@
             border: 3px dashed #DDDDDD;
             padding: 50px;
             margin: 0 auto;
-            max-width: 700px;
+            display: flex;
+            align-items: center;
+            max-width: 80%;
+             margin: 20px auto; text-align: left;
         }
-        
+        .content-box img{
+            width: 60%;
+            height: auto;
+        }
         .problem-box {
             display: flex;
             align-items: center;
@@ -282,7 +288,8 @@
             padding-right: 10px;
         }
         .guarantee-text .section-heading{
-            color: green;
+            color: var(--primario);
+            font-size: 26px;
         }
         .section-heading {
             font-family: 'Poppins', sans-serif;
@@ -506,9 +513,14 @@
         
         .guarantee-image {
             width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto;
         }
-        
+        .guarantee-image img{
+            width: 40%;
+        }
         .guarantee-text {
             width: 60%;
             text-align: justify;
@@ -536,12 +548,12 @@
             padding: 25px;
             text-align: center;
             margin: 0px;
-            width: 60%;
+            width: 47%;
             color: black;
         }
         
         .offer-premium {
-            border: 5px solid green;
+            border: 5px solid var(--secundario);
         }
         .ribbon {
         width: 150px;
@@ -604,7 +616,7 @@
             font-family: 'Barlow', sans-serif;
             font-size: 30px;
             font-weight: 900;
-            margin: 15px 0;
+            margin: 10px 0;
         }
         
         .offer-image {
@@ -623,7 +635,7 @@
             list-style: none;
             padding: 10px;
             border-radius: 5px;
-            margin: 15px 0;
+            margin: 5px 0;
             text-align: left;
         }
         
@@ -631,7 +643,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 5px;
-            font-size: 18px;
+            font-size: 15px;
             color: black;
             font-weight: 700;
         }
@@ -662,9 +674,8 @@
         .offer-cta {
             background: rgb(84, 84, 255);
             width: 100%;
-            font-size: 26px;
-            padding: 20px;
-            margin-top: 20px;
+            font-size: 22px;
+            margin-top: 5px;
         }
         
         .offer-security {
@@ -944,6 +955,9 @@
         }
         
         @media (max-width: 768px) {
+            .guarantee-image img{
+                width: 100%;
+            }
             .redline{
                 width: 120%;
             }
@@ -1047,7 +1061,12 @@
             
             
             .content-box {
+                display: flex;
+                flex-direction: column;
                 padding: 25px;
+            }
+            .content-box img{
+                width: 100%;
             }
             
             .icon-list {
@@ -1166,43 +1185,69 @@
             <button class="cta">CONHEÇA</button>
         </div>
     </section>
-    <!-- Seção de depoimentos -->
+        <!-- Depoimento adicional -->
     <section class="testimonial-section section">
-        <div class="container">
-            <div class="titulos">
-                <h1>Aprovado por +1.000 clientes.</h1>
-                <p>Nossa lista de fornecedores é grande e de qualidade, quem tem acesso concorda com isso.</p>
-            </div>
-            <div class="testimonial-grid">
-                <!-- Depoimento 1 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>"Perdi a vergonha de mandar DM e e-mail sem saber pra quem. Agora minha abordagem é direta e profissional porque sei exatamente com quem falar. Isso faz toda a diferença!"<i class="fa-solid fa-quote-right"></i></p>
-                    <div class="info">
-                        <img src="testimonial-1.png" alt="Avaliação" class="testimonial-rating">
-                        <h3 class="testimonial-author">Camila Borges<br><span>Gestor de Tráfego</span></h3>
+        <div id="container2" class="container">
+            <h1>Quem compra <strong>Recomenda</strong></h1>
+            <p>Se junte a nossa rede de clientes satisfeitos e amplie seus negócios!</p>
+                <div class="carousel-container">
+                    <div id="carousel2" class="carousel">
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide1.jpg" alt="Paisagem 1">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide2.jpg
+                            " alt="Paisagem 2">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide11.jpg" alt="Paisagem 3">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide4.jpg" alt="Paisagem 4">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide10.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 2">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide9.jpg" alt="Paisagem 3">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide11.jpg" alt="Paisagem 4">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide5.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide6.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide7.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide9.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide12.jpg" alt="Paisagem 5">
+                        </div>
+                        <div name="carousel-items" class="carousel-item">
+                            <img src="slides-carrosel2/slide13.jpg" alt="Paisagem 5">
+                        </div>
                     </div>
-                </div>
-                <!-- Depoimento 2 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Economizei um tempo absurdo. Eu passava horas fuçando o perfil das marcas e das blogueiras para tentar achar um contato. Com a lista, todo esse trabalho já está feito. Agora posso focar em criar conteúdo e nas negociações."<i class="fa-solid fa-quote-right"></i></p>
-                    <div class="info">
-
-                        <img src="testimonial-2.png" alt="Avaliação" class="testimonial-rating">
-                        <h3 class="testimonial-author">Camila Borges<br><span>MicroEmpreendedor</span></h3>
-                    </div>        
                 </div>
                 
-                <!-- Depoimento 3 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Organização 10/10. A lista veio categorizada por nicho (moda, beleza, casa, etc) e pelo valor médio de parceria. Ficou super fácil priorizar para quais marcas eu deveria ir primeiro."<i class="fa-solid fa-quote-right"></i></p>
-                    <div class="info">
-                        <img src="testimonial-3.png" alt="Avaliação" class="testimonial-rating">
-                        <h3 class="testimonial-author">Camila Borges<br><span>Social Media</span></h3>
-                    </div>
+                <div id="carousel-indicators2" class="carousel-indicators">
+                    <!-- Indicadores serão gerados pelo JavaScript -->
                 </div>
             </div>
-        </div>
     </section>
+
+    <!-- Seção de depoimentos -->
 
     <!-- Seção de problema -->
     <section class="problem-section section">
@@ -1491,69 +1536,41 @@
         </div>
     </section>
     <!-- Seção de solução -->
-
-
-    <!-- Depoimento adicional -->
     <section class="testimonial-section section">
-        <div id="container2" class="container">
-            <h1>Quem compra <strong>Recomenda</strong></h1>
-            <p>Se junte a nossa rede de clientes satisfeitos e amplie seus negócios!</p>
-            <button style="--cor:var(--primario); margin-top: 30px; color: white;" class="cta"><i class="fa-solid fa-cart-shopping"></i>FAÇA PARTE</button>
-                <div class="carousel-container">
-                    <div id="carousel2" class="carousel">
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide1.jpg" alt="Paisagem 1">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide2.jpg
-                            " alt="Paisagem 2">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide11.jpg" alt="Paisagem 3">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide4.jpg" alt="Paisagem 4">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide10.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 2">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide9.jpg" alt="Paisagem 3">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide11.jpg" alt="Paisagem 4">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide5.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide8.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide6.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide7.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide9.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide12.jpg" alt="Paisagem 5">
-                        </div>
-                        <div name="carousel-items" class="carousel-item">
-                            <img src="slides-carrosel2/slide13.jpg" alt="Paisagem 5">
-                        </div>
+        <div class="container">
+            <div class="titulos">
+                <h1>Aprovado por +1.000 clientes.</h1>
+                <p>Nossa lista de fornecedores é grande e de qualidade, quem tem acesso concorda com isso.</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>"Perdi a vergonha de mandar DM e e-mail sem saber pra quem. Agora minha abordagem é direta e profissional porque sei exatamente com quem falar. Isso faz toda a diferença!"<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+                        <img src="testimonial-1.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>Gestor de Tráfego</span></h3>
                     </div>
                 </div>
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Economizei um tempo absurdo. Eu passava horas fuçando o perfil das marcas e das blogueiras para tentar achar um contato. Com a lista, todo esse trabalho já está feito. Agora posso focar em criar conteúdo e nas negociações."<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+
+                        <img src="testimonial-2.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>MicroEmpreendedor</span></h3>
+                    </div>        
+                </div>
                 
-                <div id="carousel-indicators2" class="carousel-indicators">
-                    <!-- Indicadores serão gerados pelo JavaScript -->
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Organização 10/10. A lista veio categorizada por nicho (moda, beleza, casa, etc) e pelo valor médio de parceria. Ficou super fácil priorizar para quais marcas eu deveria ir primeiro."<i class="fa-solid fa-quote-right"></i></p>
+                    <div class="info">
+                        <img src="testimonial-3.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Borges<br><span>Social Media</span></h3>
+                    </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Seção de conteúdo -->
@@ -1564,22 +1581,29 @@
             <p>Apenas uma <b>pequena prévia</b> do que você <b>terá acesso</b> com a <b>Lista de Fornecedores:</b></p>
             <div class="divider"></div>
             
-            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Lista digital com <strong>+100 fornecedores</strong> nacionais e internacionais.</p>
+            <div class="content-box">
+                <img src="beneficios/1.png"/>
+                <p>✅ Lista digital com <strong>+100 fornecedores</strong> nacionais e internacionais.<br>Acesso imediato a uma lista exclusiva com mais de 100 fornecedores nacionais e internacionais — tudo em formato digital, prático e direto ao ponto. </p>
             </div>
             
-            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Organização por nicho (moda, beleza, casa, kids…).</p>
+            <div class="content-box">
+                <img src="beneficios/2.png"/>
+                <p>✅ Organização por nicho (moda, beleza, casa, kids…).<br>
+                Facilidade para encontrar o fornecedor ideal para seu negócio! A lista está organizada por nichos de mercado como moda, beleza, kids, casa e muito mais.</p>
             </div>
             
-            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Dados de contato verificados.</p>
+            <div class="content-box">
+                <img src="beneficios/3.png"/>
+                <p>✅ Dados de contato verificados. <br>
+                Todos os fornecedores possuem dados checados e atualizados para que você entre em contato com segurança e assertividade.</p>
             </div>
-            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Acesso vitalício</p>
+            <div class="content-box">
+                <img src="beneficios/4.png"/>
+                <p>✅ Acesso vitalício<br>Compre uma vez e tenha acesso para sempre. Você pode baixar a lista quantas vezes quiser e usar no seu tempo.</p>
             </div>
-            <div class="content-box" style="max-width: 600px; margin: 20px auto; text-align: left;">
-                <p>✅ Instruções para contato e negociação</p>
+            <div class="content-box" >
+                <img src="beneficios/5.png"/>
+                <p>✅ Instruções para contato e negociação.<br>Além da lista, você receberá um guia com orientações práticas de como se comunicar com os fornecedores, negociar de forma segura e profissional.</p>
             </div>
             
             <p>E <strong>muito mais</strong>...</p>
@@ -1627,7 +1651,7 @@
         <div class="container">
             <div class="guarantee-content">
                 <div class="guarantee-image">
-                    <img src="garantia.png" alt="Garantia de 7 dias" style="width: 100%;">
+                    <img src="garantia.png" alt="Garantia de 7 dias">
                 </div>
                 <div class="guarantee-text">
                     <h2 class="section-heading">7 Dias de Garantia<br></h2>
@@ -1856,7 +1880,7 @@
 
             }
             setInterval(function() {
-                if(currentIndex2+1==items2.length ){
+                if(currentIndex2+3==items2.length ){
                     currentIndex2=0
                     goToSlide2(0)
                 }

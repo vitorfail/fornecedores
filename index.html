@@ -178,23 +178,31 @@
             flex-direction: column;
         }
         .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-top: 30px;
         }
         
         .testimonial-card {
+            display: flex;
             background-color: #FFFFFF;
-            padding:60px 30px;
             border-radius: 15px;
             text-align: center;
-            margin: 0 20px;
+            width: 32%;
+            min-height: 320px;
+            margin-top: 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0px 45px;
+            padding-top: 20px;
         }
         .testimonial-card .info{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            flex-direction: column;
         }
         .testimonial-card .info p{
             text-align: start;
@@ -203,32 +211,34 @@
             width: 28%;
             margin: 0 auto;
         }
-        
+
         .testimonial-text {
             padding-bottom: 30px;
             font-family: 'Outfit', sans-serif;
             font-size: 17px;
-            margin: -35px 0 -5px 0;
+            text-align: justify;
         }
         
         .testimonial-rating {
-            border-radius: 50%;
-            width: 15%;
-            margin-right: 10px;
+            width: 31%;
+            margin: 10px 0px;
         }
         
         .testimonial-author {
             font-family: 'Inter', sans-serif;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 700;
+            color: #ac4b55;
             display: flex;
+            padding-bottom: 10px;
             flex-direction: column;
             align-items: flex-start;
-            color: #242424;
         }
         .testimonial-author span{
             font-size: 15px;
             font-weight: 600;
+            margin-top: -8px;
+            text-align: left;
             color: #00000093;
         }
         .testimonial-section .titulos{
@@ -681,7 +691,7 @@
         }        
         .offer-current-price {
             font-family: 'Barlow', sans-serif;
-            font-size: 47px;
+            font-size: 45px;
             font-weight: 800;
             margin: 0;
         }
@@ -962,9 +972,6 @@
                 font-size: 50px;
             }
             
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
             
             .guarantee-content {
                 grid-template-columns: 1fr;
@@ -972,6 +979,12 @@
         }
         
         @media (max-width: 768px) {
+            .testimonial-grid{
+                flex-direction: column;
+            }
+            .testimonial-card{
+                width: 100%;
+            }
             .content-box video{
                 width: 100%;
             }
@@ -1076,9 +1089,6 @@
                 font-size: 16px;
             }
             
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
             
             
             .content-box {
@@ -1141,10 +1151,7 @@
                 font-size: 35px;
             }
             
-            .testimonial-card {
-                margin: 0 10px;
-            }
-            
+
             .testimonial-avatar {
                 width: 40%;
             }
@@ -1564,30 +1571,169 @@
             <div class="testimonial-grid">
                 <!-- Depoimento 1 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-left"></i>"Perdi a vergonha de mandar DM e e-mail sem saber pra quem. Agora minha abordagem é direta e profissional porque sei exatamente com quem falar. Isso faz toda a diferença!"<i class="fa-solid fa-quote-right"></i></p>
                     <div class="info">
-                        <img loading="lazy" src="testimonial-1.webp" alt="Avaliação" class="testimonial-rating">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
                         <h3 class="testimonial-author">Roberto Justino<br><span>Desempregado</span></h3>
                     </div>
+                    <p class="testimonial-text">"Perdi a vergonha de mandar DM e e-mail sem saber pra quem. Agora minha abordagem é direta e profissional porque sei exatamente com quem falar. Isso faz toda a diferença!"</p>
                 </div>
                 <!-- Depoimento 2 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Economizei um tempo absurdo. Eu passava horas fuçando o perfil das marcas e das blogueiras para tentar achar um contato. Com a lista, todo esse trabalho já está feito. Agora posso focar em criar conteúdo e nas negociações."<i class="fa-solid fa-quote-right"></i></p>
                     <div class="info">
-
-                        <img loading="lazy" src="testimonial-2.webp" alt="Avaliação" class="testimonial-rating">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
                         <h3 class="testimonial-author">Cleiton Aluísio<br><span>Vendedor de Joias</span></h3>
-                    </div>        
+                    </div> 
+                    <p class="testimonial-text"> "Economizei um tempo absurdo. Eu passava horas fuçando o perfil das marcas e das blogueiras para tentar achar um contato. Com a lista, todo esse trabalho já está feito. Agora posso focar em criar conteúdo e nas negociações."</p>       
                 </div>
-                
                 <!-- Depoimento 3 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-text"><i class="fa-solid fa-quote-right"></i>"Organização 10/10. A lista veio categorizada por nicho (moda, beleza, casa, etc) e pelo valor médio de parceria. Ficou super fácil priorizar para quais marcas eu deveria ir primeiro."<i class="fa-solid fa-quote-right"></i></p>
                     <div class="info">
-                        <img loading="lazy" src="testimonial-3.webp" alt="Avaliação" class="testimonial-rating">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
                         <h3 class="testimonial-author">Welligton Bezerra<br><span>Revendedor</span></h3>
                     </div>
+                    <p class="testimonial-text"> "Organização 10/10. A lista veio categorizada por nicho (moda, beleza, casa, etc) e pelo valor médio de parceria. Ficou super fácil priorizar para quais marcas eu deveria ir primeiro." </p>
                 </div>
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Camila Ribeiro<br><span>Revendedora de Roupas Fitness</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Comprei o acesso achando que era só mais uma lista… Mas consegui fornecedores que me deram margem de mais de 100% na revenda. Já fiz meu primeiro mil em 4 dias" </p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Paulo Martins<br><span>Loja de Capinhas e Acessórios de Celular</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Eu revendo online e sempre penava pra achar fornecedor bom e barato. A lista me economizou meses de pesquisa. Já tô fechando minha 3ª compra com um dos contatos" </p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Janaina Souza<br><span>Empreendedora iniciante</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Nunca tinha vendido nada na vida. Peguei a lista, testei um fornecedor de perfumes contratipos e vendi tudo em uma semana no bairro. Já tô pensando no próximo lote!" </p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Amanda Costa<br><span>Loja de Maquiagem no Instagram</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Achei um fornecedor top de linha, comprei batons por R$3, vendi por R$15. Tô muito feliz com o resultado!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Rafael Silva<br><span>Brechó Masculino Online</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Nunca imaginei que teria acesso a tanta coisa com preço de atacado. Vale cada centavo!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Bruna Lima<br><span>Mãe empreendedora (laços e tiaras)</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Comecei do zero com a lista. Hoje faço renda extra vendendo no grupo das mães da escola." </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Anderson Rocha<br><span>Dropshipping com produtos importados</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Uso os fornecedores nacionais pra testar produtos antes de importar. Lucro limpo e rápido!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Letícia Almeida<br><span>Revendedora de Semijoias</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Me surpreendi com a qualidade dos fornecedores. Produto bom, entrega rápida, e preço justo!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Thiago Ramos<br><span>Loja de Eletrônicos e Gadgets</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Achei fornecedor de ring light com preço imbatível. Já vendi mais de 30 só esse mês." </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Dani Moura<br><span>Personal Organizer (e revende produtos de casa)</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Uso a lista pra comprar itens que recomendo pras clientes. Ainda revendo e lucro junto!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Carlos Nascimento<br><span>Lojinha física de variedades</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Achei 3 fornecedores que nunca vi no Google. Os preços são absurdamente bons." </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Lais Ferreira<br><span>Estudante que vende doces e lembrancinhas</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Além dos fornecedores, peguei várias ideias de negócio. Comecei com lembrancinhas e tá dando bom." </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Jéssica Monteiro<br><span>Revende roupas femininas no TikTok</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Vi uma menina indicando a lista e comprei na hora. Já fiz R$700 em uma live!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Igor Santana<br><span>E-commerce de produtos pet</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Achei fornecedor de camas e brinquedos pet com preço melhor que no Shopee. Tô vendendo super bem!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Natalia Borges<br><span>Costureira e microempreendedora</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Achei fornecedor de tecidos e aviamentos que me fez economizar mais de R$400 no mês." </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Lucas Pereira<br><span>Youtuber de produtos virais</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Uso a lista pra achar produtos tendência. Já fiz vídeo com top 5 achadinhos e vendi tudo!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Renata Dias<br><span>Artesã e revendedora de MDF</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Consegui fornecedor direto de fábrica, coisa que só loja grande tinha acesso. Gratidão!" </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="info">
+                        <img loading="lazy" src="avaliacao.png" alt="Avaliação" class="testimonial-rating">
+                        <h3 class="testimonial-author">Bruno Tavares<br><span>Afiliado e infoprodutor</span></h3>
+                    </div>
+                    <p class="testimonial-text"> "Indico a lista como bônus nos meus cursos e a galera AMA. Só elogio!" </p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1650,7 +1796,7 @@
                     <img src="logo.webp" alt="Logo" class="offer-logo">
                     <h3 class="offer-title">Lista de Fornecedores</h3>
                     <p class="offer-original-price">De R$ 197,00 por</p>
-                    <h4 class="offer-current-price">APENAS <strong>R$ 97</strong></h4>
+                    <h4 class="offer-current-price">APENAS <strong>R$ 37</strong></h4>
                     
                     <ul class="offer-features">
                         <li><i class="fas fa-check-square"></i> Garantia de 7 dias.</li>
@@ -1683,7 +1829,7 @@
     <section class="faq-section section">
         <div class="container text-center">
             <h2 class="section-heading">Ainda Está Com <b>Alguma Dúvida?</b></h2>
-            <p>Veja Abaixo As <strong>Dúvidas Mais Comuns</strong> Sobre o <strong>[Nome do seu produto]</strong></p>
+            <p>Veja Abaixo As <strong>Dúvidas Mais Comuns</strong> Sobre a <strong>Lista Secreta</strong></p>
             <div class="divider"></div>
             
             <div class="faq-container">

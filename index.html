@@ -575,6 +575,10 @@
             text-align: center;
             margin: 0px;
             width: 47%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             color: black;
         }
         
@@ -639,10 +643,13 @@
         }
         
         .offer-title {
-            font-family: 'Barlow', sans-serif;
-            font-size: 30px;
-            font-weight: 900;
+            font-size: 15px;
+            background: #A96166;
             margin: 10px 0;
+            color: white;
+            line-height: 1;
+            border-radius: 10px;
+            padding:  10px 5px;
         }
         
         .offer-image {
@@ -686,7 +693,7 @@
             margin-bottom: 5px;
         }
         .offer-current-price strong{
-            color: green;
+            color: #AB6168;
         }        
         .offer-current-price {
             font-family: 'Barlow', sans-serif;
@@ -695,11 +702,11 @@
             margin: 0;
         }
         .offer-premium .offer-cta{
-            background-color: #1d8f56;
+            background-color: #AB6168;
         }
         .offer-cta {
             background: rgb(84, 84, 255);
-            width: 100%;
+            width: 75%;
             font-size: 22px;
             margin-top: 5px;
         }
@@ -990,7 +997,13 @@
                 width: 100%;
             }
             .redline{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 120%;
+            }
+            .svg:nth-of-type(2){
+                display: none;
             }
             .offer-card{
                 width: 95%;            
@@ -1093,6 +1106,7 @@
                 display: flex;
                 flex-direction: column;
                 padding: 25px;
+                max-width: 100%;
             }
             .content-box img{
                 width: 100%;
@@ -1111,7 +1125,11 @@
                 width: 49%;
             }
             .offer-title{
-                font-size: 26px;
+                width: 90%;
+                font-size: 16px;
+            }
+            .offer-cta{
+                width: 100%;
             }
             .offer-current-price{
                 font-size: 36px;
@@ -1609,9 +1627,10 @@
                 <div class="offer-card offer-premium">
                     <div class="ribbon ribbon-top-left"><span>Popular</span></div>
                     <img src="logo.webp" alt="Logo" class="offer-logo">
-                    <h3 class="offer-title">Lista de Fornecedores</h3>
-                    <p class="offer-original-price">De R$ 197,00 por</p>
-                    <h4 class="offer-current-price">APENAS <strong>R$ 37</strong></h4>
+                    <h3 id="offer-title" class="offer-title">Desconto Especial Hoje:<br>
+                    {dia-semana}, {mes} {dia}, {ano}</h3>
+                    <p class="offer-original-price">De R$ 97,00 por</p>
+                    <h4 class="offer-current-price">APENAS <strong>R$37</strong></h4>
                     
                     <ul class="offer-features">
                         <li><i class="fas fa-check-square"></i> Garantia de 30 dias.</li>
@@ -2036,6 +2055,15 @@
                 }
 
             }
+            var datas = document.getElementById("offer-title");
+            var dia = new Date()
+            var day = dia.getDate()
+            var semana = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábada"]
+            var mes = dia.getMonth() +1
+            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+            var ano = dia.getFullYear()
+            console.log(dia.getDate())
+            datas.innerHTML = "Desconto Especial Hoje: <br> "+ semana[dia.getDay()]+", "+meses[mes]+" "+day+", "+ano
             setInterval(function() {
                 if(currentIndex2+3==items2.length ){
                     currentIndex2=0

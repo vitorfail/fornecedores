@@ -267,6 +267,61 @@
             width: 60%;
             height: auto;
         }
+        .cover-capa{
+                width: 160%;
+                aspect-ratio: 1/1;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+        .cover-capa #image1{
+            z-index: 4;
+        }
+        .cover-capa #image1,
+        .cover-capa #image2, 
+        .cover-capa #image3, 
+        .cover-capa #image4,
+        .cover-capa #image5{
+            width: 60%;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.24);
+                margin: 0;
+                position: absolute;
+        }
+        .cover-capa #image2{
+            --x: -45px;
+            --y:-45px;
+            animation: animation1 2.8s ease-in-out infinite;
+        }
+        .cover-capa #image3{
+            --x: -65px;
+            --y:55px;
+            animation: animation1 2.6s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        .cover-capa #image4{
+            --x: 65px;
+            --y:55px;
+            animation: animation1 2.6s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        .cover-capa #image5{
+            --x: 75px;
+            --y:-55px;
+            animation: animation1 2.6s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        @keyframes animation1 {
+            0%{
+                transform: translateX(0px) translateY(0px);
+            }
+            50%{
+                transform: translateX(var(--x)) translateY(var(--y));
+            }
+            100%{
+                transform: translateX(var(--x)) translateY(var(--y));
+            }
+        }
         .content-box img{
             margin-left: 100px;
             height: auto;
@@ -576,7 +631,7 @@
         .carrossel-container .lista .slide .info> h1{
             font-family: Hiluna;
             color: var(--primario);
-            font-size: 40px;
+            font-size: 30px;
         }
         .carrossel-container .lista .slide .info> h2{
             color: white;
@@ -1069,6 +1124,9 @@
         }
         
         @media (max-width: 768px) {
+            .cover-capa{
+                width: 100%;
+            }
             .carrossel-container .rating{
                 width: 33%;
                 margin: 0;
@@ -1099,6 +1157,7 @@
             .content-box video{
                 width: 100%;
             }
+
             .guarantee-image img{
                 width: 100%;
             }

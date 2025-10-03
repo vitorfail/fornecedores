@@ -312,26 +312,22 @@
         .cover-capa #image2{
             --x: -45px;
             --y:-45px;
-            animation: animation1 2.5s ease-in-out infinite;
-            animation-delay: 0.5s;
+            animation: animation1 2.6s ease-in-out infinite;
         }
         .cover-capa #image3{
             --x: -65px;
             --y:55px;
             animation: animation1 2.6s ease-in-out infinite;
-            animation-delay: 0.5s;
         }
         .cover-capa #image4{
             --x: 65px;
             --y:55px;
             animation: animation1 2.6s ease-in-out infinite;
-            animation-delay: 0.5s;
         }
         .cover-capa #image5{
             --x: 75px;
             --y:-55px;
             animation: animation1 2.6s ease-in-out infinite;
-            animation-delay: 0.5s;
         }
         @keyframes animation1 {
             0%{

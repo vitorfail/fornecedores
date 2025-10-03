@@ -284,9 +284,30 @@
         .cover-capa #image4,
         .cover-capa #image5{
             width: 60%;
-            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.24);
+
                 margin: 0;
-                position: absolute;
+        }
+        .cover-capa img{
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.24);
+            position: absolute;
+        }
+        .cover-capa #entrega1{
+            transform-origin: bottom left;
+            --rodar: -15deg;
+            z-index: 3;
+            animation: animation2 3s ease-in-out infinite;
+        }
+        .cover-capa #entrega2{
+            --rodar: -5deg;
+            transform-origin: bottom left;
+            animation: animation2 3s ease-in-out infinite;
+            z-index: 2;
+        }
+        .cover-capa #entrega3{
+            --rodar: 5deg;
+            transform-origin: bottom left;
+            animation: animation2 3s ease-in-out infinite;
+            z-index: 1;
         }
         .cover-capa #image2{
             --x: -45px;
@@ -320,6 +341,23 @@
             }
             100%{
                 transform: translateX(var(--x)) translateY(var(--y));
+            }
+        }
+        @keyframes animation2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            10%{
+                transform: rotate(0deg);
+            }
+            30%{
+                transform: rotate(var(--rodar));
+            }
+            70%{
+                transform: rotate(var(--rodar));
+            }
+            100%{
+                transform: rotate(0deg);
             }
         }
         .content-box img{

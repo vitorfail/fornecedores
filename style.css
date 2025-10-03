@@ -9,7 +9,8 @@
         }
         @font-face {
             font-family: Hiluna;
-            src: url("fonts/HilunaPersonalUseOnly-Regular.ttf");
+            src: url("fonts/HilunaPersonalUseOnly-Regular.ttf") format('truetype');
+            font-display: swap;
         }
         :root{
             --smooth: #F8F7F4;
